@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Montserrat;
+    src: url('../font/MontserratAlternates-Regular.ttf');
+}
+
 :root {
     --bg-light-pink: #FFEFEF;
     --bg-pink-100: #c2206d;
@@ -9,7 +14,7 @@ body {
     margin: 0;
     background: url('../../media/images/pexels-karolina-4041285.jpg') no-repeat center center;
     background-size: cover;
-    font-family: Montserrat Alternates;
+    font-family: Montserrat, Verdana, monospace;
 }
 
 .pink-text {
