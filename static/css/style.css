@@ -4,6 +4,8 @@
 
 body {
     margin: 0;
+    background: url('../../media/images/pexels-monstera-66211822.jpg') no-repeat center center;
+    background-size: cover;
 }
 
 .top-logo {
