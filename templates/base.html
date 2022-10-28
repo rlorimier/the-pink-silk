@@ -90,7 +90,7 @@
     </div>
 
     <!-- CONTENT -->
-    <div>
+    <div class="add-margin">
         {% block content %}
         {% endblock %}
     </div>
@@ -99,17 +99,41 @@
     <!-- FOOTER -->
     <footer class="py-3 pink-silk fixed-bottom">
         <!--  -->
-        <div>
+        <div class="card-group">
+            <div class="card">
+                <!-- <img src="..." class="card-img-top" alt="..."> -->
+                <div class="card-body">
+                    <h5 class="card-title">Contact Us</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+            </div>
+            <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Follow Us</h5>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                 </div>
+            </div>
+            <div class="card">
+                <!-- <img src="..." class="card-img-top" alt="..."> -->
+                <div class="card-body">
+                   <h5 class="card-title">Find Us</h5>
+                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54086.40306443714!2d-6.321810919478763!3d53.19446581979751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4867a14aad59d2d5%3A0x2b831f3332cec4f9!2sCrone%20Woods!5e0!3m2!1sen!2sie!4v1666999081176!5m2!1sen!2sie" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                   <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p> -->
+                </div>
+                <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+            </div>
+          </div>
 
-        </div>
-        <div>
-
-        </div>
-        <div>
-
-        </div>
-
-        <p class="m-0 text-dark text-center ">Copyright &copy; The Pink Silk</p>
+        <p class="m-0 pink-text text-center ">Copyright &copy; The Pink Silk</p>
     </footer>
     {% endblock %}
 

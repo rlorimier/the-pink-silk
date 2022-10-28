@@ -17,6 +17,10 @@ body {
     font-family: Montserrat, Verdana, monospace;
 }
 
+.add-margin {
+    margin-top: 180px;
+}
+
 .pink-text {
     color: var(--bg-pink-500);
 }
