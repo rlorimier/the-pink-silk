@@ -1,16 +1,23 @@
 :root {
     --bg-light-pink: #FFEFEF;
+    --bg-pink-100: #c2206d;
+    --bg-dark-pink: #802a30;
+    --bg-pink-500: #620b1d;
 }
 
 body {
     margin: 0;
-    background: url('../../media/images/pexels-monstera-66211822.jpg') no-repeat center center;
+    background: url('../../media/images/pexels-karolina-4041285.jpg') no-repeat center center;
     background-size: cover;
+    font-family: Montserrat Alternates;
 }
 
-.top-logo {
-    width: 100%;
-    height: 200px;
+.pink-text {
+    color: var(--bg-pink-500);
+}
+
+.pink-dark {
+    color: var(--bg-dark-pink);
 }
 
 .pink-silk {
