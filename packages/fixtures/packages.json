@@ -1,0 +1,46 @@
+[
+    {
+        "pk": 1,
+        "model": "spa.package",
+        "fields": {
+            "name": "diamont",
+            "image": "",
+            "price": 399,
+            "duration": "8h",
+            "description": "Full day service with all inclusive drinks plus lunch and snacks"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "spa.package",
+        "fields": {
+            "name": "gold",
+            "image": "",
+            "price": 299,
+            "duration": "6h",
+            "description": "Full day service with all inclusive drinks plus lunch and snacks, excluding mud - bath and jacuzzi"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "spa.package",
+        "fields": {
+            "name": "silver",
+            "image": "",
+            "price": 199,
+            "duration": "4h",
+            "description": "Half day service with all inclusive drinks, excluding mud - bath, jacuzzi, sauna and swimming pool"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "spa.package",
+        "fields": {
+            "name": "bronze",
+            "image": "",
+            "price": 99,
+            "duration": "2h",
+            "description": "2 hour skin treatments only, no drinks or food included"
+        }
+    }
+]
