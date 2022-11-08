@@ -15,7 +15,7 @@
         "model": "packages.packages",
         "fields": {
             "name": "gold",
-            "image": "pexels-karolina-grabowska-4239013.jpg",
+            "image": "",
             "price": 299,
             "duration": "6h",
             "description": "Full day service with all inclusive drinks plus lunch and snacks, excluding mud - bath and jacuzzi"
