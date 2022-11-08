@@ -1,7 +1,7 @@
 [
     {
         "pk": 1,
-        "model": "spa.package",
+        "model": "packages.packages",
         "fields": {
             "name": "diamont",
             "image": "",
@@ -12,7 +12,7 @@
     },
     {
         "pk": 2,
-        "model": "spa.package",
+        "model": "packages.packages",
         "fields": {
             "name": "gold",
             "image": "",
@@ -23,7 +23,7 @@
     },
     {
         "pk": 3,
-        "model": "spa.package",
+        "model": "packages.packages",
         "fields": {
             "name": "silver",
             "image": "",
@@ -34,7 +34,7 @@
     },
     {
         "pk": 4,
-        "model": "spa.package",
+        "model": "packages.packages",
         "fields": {
             "name": "bronze",
             "image": "",
