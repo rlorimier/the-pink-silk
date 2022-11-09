@@ -41,17 +41,17 @@
     <!-- NAV BAR -->
     <nav class="navbar navbar-expand-lg navbar-light pink-silk">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="{% url 'home' %}">
                 <img src="../media/images/wallpaper_cover_small.png" alt="The Pink Silk Spa" height="70">
             </a>
             
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav h5 ">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home |</a>
+                        <a class="nav-link" href="{% url 'home' %}">Home |</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Spa Packages |</a>
+                        <a class="nav-link" href="{% url 'packages' %}">Spa Packages |</a>
                     </li>
                     
                     <li class="nav-item">

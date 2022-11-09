@@ -26,7 +26,7 @@
         "model": "packages.packages",
         "fields": {
             "name": "silver",
-            "image": "",
+            "image": "pexels-karolina-grabowska-4210315.jpg",
             "price": 199,
             "duration": "4h",
             "description": "Half day service with all inclusive drinks, excluding mud - bath, jacuzzi, sauna and swimming pool"
@@ -37,7 +37,7 @@
         "model": "packages.packages",
         "fields": {
             "name": "bronze",
-            "image": "",
+            "image": "pexels-karolina-grabowska-4210315.jpg",
             "price": 99,
             "duration": "2h",
             "description": "2 hour skin treatments only, no drinks or food included"

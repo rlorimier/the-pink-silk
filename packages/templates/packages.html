@@ -10,12 +10,14 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container h-100">
+    <div class="container">
         {% for packages in packages %}
-        <div class="row">
-            <div class="col-md-5">
+        <div class="row justify-content-start">
+            <div class="col-md-2">
                 <img src="{{ packages.image }}" alt="Profile image for {{ packages.name }}">
-                <h2 class="col-md-7">{{ packages.name }}</h2>
+            </div>
+            <div class="col-md-4">
+                <h2 >{{ packages.name }}</h2>
             </div>
         </div>
     
