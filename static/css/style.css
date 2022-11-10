@@ -34,3 +34,10 @@ body {
     background-color: var(--bg-light-pink);
 }
 
+.card {
+    border: none !important;
+}
+
+.findus-btn {
+    margin: 10px;
+}
