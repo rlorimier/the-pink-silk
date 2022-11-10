@@ -4,7 +4,7 @@
         "model": "packages.packages",
         "fields": {
             "name": "diamont",
-            "image": "",
+            "image": "pexels-burst-374071.jpg",
             "price": 399,
             "duration": "8h",
             "description": "Full day service with all inclusive drinks plus lunch and snacks"
@@ -15,7 +15,7 @@
         "model": "packages.packages",
         "fields": {
             "name": "gold",
-            "image": "",
+            "image": "pexels-karolina-grabowska-4239013.jpg",
             "price": 299,
             "duration": "6h",
             "description": "Full day service with all inclusive drinks plus lunch and snacks, excluding mud - bath and jacuzzi"
@@ -26,7 +26,7 @@
         "model": "packages.packages",
         "fields": {
             "name": "silver",
-            "image": "pexels-karolina-grabowska-4210315.jpg",
+            "image": "pexels-rodnae-productions-6724351.jpg",
             "price": 199,
             "duration": "4h",
             "description": "Half day service with all inclusive drinks, excluding mud - bath, jacuzzi, sauna and swimming pool"
@@ -37,7 +37,7 @@
         "model": "packages.packages",
         "fields": {
             "name": "bronze",
-            "image": "pexels-karolina-grabowska-4210315.jpg",
+            "image": "pexels-victoria-emerson-6037891.jpg",
             "price": 99,
             "duration": "2h",
             "description": "2 hour skin treatments only, no drinks or food included"
