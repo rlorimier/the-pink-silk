@@ -1,6 +1,6 @@
 from django.db import models
 
-# Create your models here.
+
 class Packages(models.Model):
 
     class Meta:

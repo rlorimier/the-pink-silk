@@ -11,17 +11,17 @@
 
 {% block content %}
     <div class="container pink-text">
-        {% for packages in packages %}
+        {% for package in packages %}
         <div class="row justify-content-start">
             <div class="col-md-4 fw-bolder text-uppercase">
-                <h2 >{{ packages.name }}</h2>
+                <h2 >{{ package.name }}</h2>
             </div>
         </div>
         <div class="col-md-12 fw-bold">
-            <p>{{ packages.description }}</p>
+            <p>{{ package.description }}</p>
         </div>
         <div>
-            <a href="#">
+            <a href="{% url 'package_detail' package.id %}">
                 <button class="btn btn-sm btn-outline-dark">Find out more</button>
             </a>
         </div>
