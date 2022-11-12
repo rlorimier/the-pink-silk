@@ -41,3 +41,16 @@ body {
 .findus-btn {
     margin: 10px;
 }
+
+.package_img {
+    width: 200px;
+    height: 150px;
+    border-radius: 10%;
+}
+
+.pkg_included,
+.pkg_featured,
+.pkg_details,
+.pkg_btn {
+    margin-top: 40px;
+}

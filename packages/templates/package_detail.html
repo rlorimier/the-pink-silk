@@ -4,23 +4,73 @@
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
-            <div class="col text-center fw-bold fs-4 pink-text">spa packages</div>
+            <div class="col text-center fw-bold fs-4 pink-text">spa package - {{ package.name }}</div>
         </div>
     </div>
 {% endblock %}
 
 {% block content %}
-    <div class="container">
+    <div class="container pink-text">
         <div class="row justify-content-start">
-            <div class="col-md-2">
-                <img src="{{ package.image }}" alt="Profile image for {{ package.name }}">
+            <!-- <div class="col-md-2">
+                <img class="package_img" src="{{ package.image_url }}" alt="Profile image for {{ package.name }}">
+            </div> -->
+            <div class="col-md-4 align-items-center text-uppercase text-center">
+                <h1>{{ package.name }}</h1>
             </div>
-            <div class="col-md-4">
-                <h2 >{{ package.name }}</h2>
+            <div>
+                <p>{{ package.description }}</p>
             </div>
-        </div>
-        <div class="col-md-12">
-            <p>{{ package }}</p>
         </div>
     </div>
+
+    <div class="container pink-text pkg_details">
+        <div class="row justify-content-start">
+            <div class="col-md-8">
+                <p>Duration: {{ package.duration }} | Price: ${{ package.price }}</p>
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container pink-text pkg_included">
+        <div class="row justify-content-start">
+            <div class="col-md-8">
+                <h3>What is included:</h3>
+                <p>{{ package.included1 }}</p>
+                <p>{{ package.included2 }}</p>
+                <p>{{ package.included3 }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container pink-text pkg_featured">
+        <div class="row justify-content-start">
+            <div class="col-md-8">
+                <h3>Features:</h3>
+                <p>{{ package.treatments1 }}</p>
+                <p>{{ package.treatments2 }}</p>
+                <p>{{ package.treatments3 }}</p>
+                <p>{{ package.treatments4 }}</p>
+                <p>{{ package.treatments5 }}</p>
+                <p>{{ package.treatments6 }}</p>
+                <p>{{ package.treatments7 }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container pkg_btn">
+        <div class="row justify-content-start">
+            <div class="col-md-8">
+                <a href="#">
+                    <button class="btn btn-sm btn-outline-dark">Add to cart</button>
+                </a>
+                <span> </span>
+                <a href="{% url 'packages' %}">
+                    <button class="btn btn-sm btn-outline-dark">Back to packages</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
 {% endblock %}
