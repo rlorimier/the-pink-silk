@@ -10,20 +10,22 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
-                <h1 class="display-4 logo-font pink-text">
-                    welcome to
-                </h1>
-                <h1 class="display-1 logo-font pink-text">
-                    The Pink Silk
-                </h1>
-                <div class="my-5">
-                    <h4>
-                        <a href="{% url 'packages' %}" class="btn btn-lg rounded-0 text-uppercase py-3 pink-text">Discover</a>
-                    </h4>
-                </div>
+    <div class="container pink-text">
+        <div class="row">
+            <div class="col">
+                {% if bag_items %}
+                    <div class="table-responsive rounded">
+                        {{ bag_items}}
+                    </div>
+                {% else %}
+                    <p class="lead mb-5">Your bag is empty.</p>
+                    <a href="{% url 'packages' %}" class="btn btn-sm btn-outline-dark">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="text-uppercase">Back to packages</span>
+                    </a>
+                {% endif %}
             </div>
         </div>
     </div>
