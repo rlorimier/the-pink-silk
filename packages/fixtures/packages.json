@@ -4,10 +4,21 @@
         "model": "packages.packages",
         "fields": {
             "name": "diamont",
-            "image": "pexels-burst-374071.jpg",
+            "image_url": "https://images.pexels.com/photos/6621181/pexels-photo-6621181.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "image": "pexels-monstera-6621181.jpg",
             "price": 399,
             "duration": "8h",
-            "description": "Full day service with all inclusive drinks plus lunch and snacks"
+            "description": "Full day service with all inclusive drinks plus lunch and snacks",
+            "included1" : "Selection of drinks: champagne, soft drinks, tea and coffe",
+            "included2": "Selection of snacks: fresh pastries, cakes and biscuits",
+            "included3": "Our personalized robe and slippers" ,
+            "treatments1" : "Skin analyses",
+            "treatments2": "Chocolate facial",
+            "treatments3": "Eye mask",
+            "treatments4": "Full body holistic massage",
+            "treatments5": "-Lunch break-",
+            "treatments6": "Spa manicure and pedicure (classical or shellac)",
+            "treatments7": "Free access to our Jacuzzi, Mud-bath, Swimming pool and Sauna"
         }
     },
     {
@@ -15,10 +26,21 @@
         "model": "packages.packages",
         "fields": {
             "name": "gold",
-            "image": "pexels-karolina-grabowska-4239013.jpg",
+            "image_url": "https://images.pexels.com/photos/6620860/pexels-photo-6620860.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "image": "pexels-monstera-6620860.jpg",
             "price": 299,
             "duration": "6h",
-            "description": "Full day service with all inclusive drinks plus lunch and snacks, excluding mud - bath and jacuzzi"
+            "description": "Full day service with all inclusive drinks plus lunch and snacks, excluding mud - bath and jacuzzi",
+            "included1" : "Selection of drinks: champagne, soft drinks, tea and coffe",
+            "included2": "Selection of snacks: fresh pastries, cakes and biscuits",
+            "included3": "" ,
+            "treatments1" : "Skin analyses",
+            "treatments2": "Chocolate facial",
+            "treatments3": "Eye mask",
+            "treatments4": "Full body holistic massage",
+            "treatments5": "-Lunch break-",
+            "treatments6": "Spa manicure and pedicure (classical or shellac)",
+            "treatments7": "Free access to our Swimming pool and Sauna"
         }
     },
     {
@@ -26,10 +48,21 @@
         "model": "packages.packages",
         "fields": {
             "name": "silver",
+            "image_url": "https://images.pexels.com/photos/6724351/pexels-photo-6724351.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             "image": "pexels-rodnae-productions-6724351.jpg",
             "price": 199,
             "duration": "4h",
-            "description": "Half day service with all inclusive drinks, excluding mud - bath, jacuzzi, sauna and swimming pool"
+            "description": "Half day service with all inclusive drinks, excluding mud - bath, jacuzzi, sauna and swimming pool",
+            "included1" : "Selection of drinks: soft drinks, tea and coffe",
+            "included2": "Selection of snacks: fresh pastries, cakes and biscuits",
+            "included3": "" ,
+            "treatments1" : "Skin analyses",
+            "treatments2": "Chocolate facial",
+            "treatments3": "Eye mask",
+            "treatments4": "Full body holistic massage",
+            "treatments5": "Spa manicure and pedicure (classical or shellac)",
+            "treatments6": "",
+            "treatments7": ""
         }
     },
     {
@@ -37,10 +70,21 @@
         "model": "packages.packages",
         "fields": {
             "name": "bronze",
-            "image": "pexels-victoria-emerson-6037891.jpg",
+            "image_url": "https://images.pexels.com/photos/6724316/pexels-photo-6724316.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "image": "pexels-rodnae-productions-6724316.jpg",
             "price": 99,
             "duration": "2h",
-            "description": "2 hour skin treatments only, no drinks or food included"
+            "description": "2 hour skin treatments only",
+            "included1" : "Tea or coffe on arrival",
+            "included2": "",
+            "included3": "" ,
+            "treatments1" : "Skin analyses",
+            "treatments2": "Chocolate facial",
+            "treatments3": "Eye mask",
+            "treatments4": "Spa manicure and pedicure (classical or shellac)",
+            "treatments5": "",
+            "treatments6": "",
+            "treatments7": ""
         }
     }
 ]
