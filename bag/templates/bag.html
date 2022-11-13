@@ -12,10 +12,54 @@
 {% block content %}
     <div class="container pink-text">
         <div class="row">
-            <div class="col">
+            <div class="col-md-8">
                 {% if bag_items %}
                     <div class="table-responsive rounded">
-                        {{ bag_items}}
+                        <table class="table pink-text">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Package</th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Quantity</th>
+                                    <th scope="col">Sub total</th>
+                                </tr>
+                            </thead>
+                            {% for item in bag_items %}
+                            <tbody>
+                                <tr>
+                                    <th class="text-uppercase" scope="row">{{ item.package.name }}</th>
+                                    <td>${{ item.package.price }}</td>
+                                    <td>{{ item.quantity }}</td>
+                                    <td>${{ item.package.price }}</td>
+                                </tr>
+                            </tbody>
+                            {% endfor %}
+                        </table>
+                        <table class="table table-borderless pink-text">
+                            <tbody>
+                            <tr>
+                                <th></th>
+                                <td></td>
+                                <td><strong></strong>Bag Total: </strong></td>
+                                <td><strong>${{ total|floatformat:2 }}</strong></td>
+                            </tr>
+                            </tbody>
+                            <tr class="table-borderless">
+                                <td colspan="5" class="text-right">
+                                    <a href="{% url 'packages' %}" class="btn btn-sm btn-outline-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </span>
+                                        <span class="text-uppercase">Back to packages</span>
+                                    </a>
+                                    <a href="#" class="btn btn-sm btn-outline-dark">
+                                        <span class="icon">
+                                            <i class="fa-solid fa-unlock-keyhole"></i>
+                                        </span>
+                                        <span class="text-uppercase">Secure Checkout</span>
+                                    </a>
+                            </tr>
+                        </table>
                     </div>
                 {% else %}
                     <p class="lead mb-5">Your bag is empty.</p>
