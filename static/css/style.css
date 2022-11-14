@@ -18,8 +18,8 @@ body {
 }
 
 .add-margin {
-    margin-top: 130px;
-    margin-bottom: 100px;
+    margin-top: 130px !important;
+    margin-bottom: 100px !important;
 }
 
 .pink-text {
@@ -54,3 +54,9 @@ body {
 .pkg_btn {
     margin-top: 40px;
 }
+
+.bag-total {
+    text-align: right;
+}
+
+    

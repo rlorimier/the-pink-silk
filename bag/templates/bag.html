@@ -15,7 +15,7 @@
             <div class="col-md-8">
                 {% if bag_items %}
                     <div class="table-responsive rounded">
-                        <table class="table pink-text">
+                        <table class="table table-sm pink-text ">
                             <thead>
                                 <tr>
                                     <th scope="col">Package</th>
@@ -24,41 +24,56 @@
                                     <th scope="col">Sub total</th>
                                 </tr>
                             </thead>
-                            {% for item in bag_items %}
+                            
                             <tbody>
+                            {% for item in bag_items %}
                                 <tr>
                                     <th class="text-uppercase" scope="row">{{ item.package.name }}</th>
                                     <td>${{ item.package.price }}</td>
                                     <td>{{ item.quantity }}</td>
                                     <td>${{ item.package.price }}</td>
                                 </tr>
+                            {% endfor %}    
+                            
+                                <tr class="table-borderless">
+                                    <td colspan="3" class="pt-4">
+                                        <h5 class="bag-total" ><strong>Bag Total: </strong></h5>
+                                    </td>
+                                    <td colspan="4" class="pt-4 text-left">
+                                        <h5><strong>${{ total|floatformat:2 }}</strong></h5>
+                                    </td>
+                                </tr>
+                                
                             </tbody>
-                            {% endfor %}
                         </table>
-                        <table class="table table-borderless pink-text">
+
+                        <table class="table table-borderless pink-text add-margin bag-total">
+                            <!-- <thead>
+                                <tr>
+                                    <h5 class="bag-total" >
+                                        <strong>Bag Total: $ {{ total|floatformat:2 }}</strong>
+                                    </h5>
+                                </tr>
+                            </thead> -->
                             <tbody>
-                            <tr>
-                                <th></th>
-                                <td></td>
-                                <td><strong></strong>Bag Total: </strong></td>
-                                <td><strong>${{ total|floatformat:2 }}</strong></td>
-                            </tr>
+                                <tr class="table-borderless">
+                                    <td></td>
+                                    <td class="">
+                                        <a href="{% url 'packages' %}" class="btn btn-sm btn-outline-dark">
+                                            <span class="icon">
+                                                <i class="fas fa-chevron-left"></i>
+                                            </span>
+                                            <span class="text-uppercase">Back to packages</span>
+                                        </a>
+                                        <a href="#" class="btn btn-sm btn-outline-dark">
+                                            <span class="icon">
+                                                <i class="fa-solid fa-unlock-keyhole"></i>
+                                            </span>
+                                            <span class="text-uppercase">Secure Checkout</span>
+                                        </a>
+                                    </td>
+                                </tr>
                             </tbody>
-                            <tr class="table-borderless">
-                                <td colspan="5" class="text-right">
-                                    <a href="{% url 'packages' %}" class="btn btn-sm btn-outline-dark">
-                                        <span class="icon">
-                                            <i class="fas fa-chevron-left"></i>
-                                        </span>
-                                        <span class="text-uppercase">Back to packages</span>
-                                    </a>
-                                    <a href="#" class="btn btn-sm btn-outline-dark">
-                                        <span class="icon">
-                                            <i class="fa-solid fa-unlock-keyhole"></i>
-                                        </span>
-                                        <span class="text-uppercase">Secure Checkout</span>
-                                    </a>
-                            </tr>
                         </table>
                     </div>
                 {% else %}
