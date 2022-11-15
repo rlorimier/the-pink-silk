@@ -89,6 +89,24 @@
         </div>
     </nav>
 
+    {% if messages %}
+        <div class="message-container">
+            {% for message in messages %}
+                {% with message.level as level %}
+                    {% if level == 40 %}
+                        {% include 'toasts/toast_error.html' %}
+                    {% elif level == 30 %}
+                        {% include 'toasts/toast_warning.html' %}
+                    {% elif level == 25 %}
+                        {% include 'toasts/toast_success.html' %}
+                    {% else %}
+                        {% include 'toasts/toast_info.html' %}
+                    {% endif %}
+                {% endwith %}
+            {% endfor %}
+        </div>
+    {% endif %}
+
     <!-- WELCOME PAGE HEADER -->
     <div>
         {% block page_header %}
@@ -164,6 +182,15 @@
 
         <p class="m-0 pink-text text-center ">Copyright &copy; The Pink Silk</p>
     </footer>
+    {% endblock %}
+
+    <!-- TOASTS -->
+
+
+    {% block postloadjs %}
+    <script type="text/javascript">
+        $('.toast').toast('show');
+    </script>
     {% endblock %}
 
 </body>
