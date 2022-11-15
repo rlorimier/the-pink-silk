@@ -5,6 +5,38 @@
         <button type="button" class="btn-close me-2 m-auto" data-dismiss="toast" aria-label="Close"></button>
     </div>
     <div class="toast-body">
-        {{ message }}        
+        <div class="row">
+            <div class="col">
+                {{ message }}
+                <hr class="mt-1 mb-3">
+            </div>
+        </div>        
+
+        {% if grand_total %}
+        <p class="logo-font bg-light text-black py-1">Package(s) Selected ({{ package_count }}) :</p>
+        <div class="bag-notification-wrapper">
+            {% for item in bag_items %}
+            <div class="row">
+                <div class="col-12">
+                    <p class="my-0 text-uppercase"><strong>{{ item.package.name }}</strong></p>
+                    <p class="my-0 small text-muted">Quantity: {{ item.quantity }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <a href="{% url 'view_bag' %}" class="btn btn-sm btn-block rounded-0 btn-dark">
+                    <span class="icon">
+                        <i class="fa-solid fa-unlock-keyhole"></i>
+                    </span>
+                    <span class="text-uppercase"> Go To Secure Checkout</span>
+                </a>
+            </div>
+        </div>
+        {% endif %}
     </div>
+
+
 </div>
