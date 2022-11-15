@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -31,7 +32,7 @@
                                     <th class="text-uppercase" scope="row">{{ item.package.name }}</th>
                                     <td>${{ item.package.price }}</td>
                                     <!-- <td>{{ item.quantity }}</td> -->
-                                    <td>
+                                    <td class="py-3 w-25">
                                         <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                             {% csrf_token %}
                                             <div class="form-group">
@@ -59,10 +60,10 @@
                                                 </div>
                                             </div>
                                         </form>
-                                        <a class="update-link text-info"><small>Update</small></a>
-                                        <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
+                                        <a class="update-link text-dark"><small>Update</small></a>
+                                        <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"><small>Remove</small></a>
                                     </td>
-                                    <td>${{ item.package.price }}</td>
+                                    <td>${{ item.package.price | calc_subtotal:item.quantity }}</td>
                                 </tr>
                             {% endfor %}    
                             
