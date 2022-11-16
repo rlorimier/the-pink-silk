@@ -64,6 +64,10 @@ body {
     cursor: pointer;
 }
 
+.order-summary {
+    background: white;
+}
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {

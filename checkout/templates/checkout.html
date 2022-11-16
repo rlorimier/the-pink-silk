@@ -12,43 +12,35 @@
 
 {% block content %}
     <div class="container pink-text">
-        <!-- <div class="row">
-            <div class="col-md-8"> -->
-
         <div class="row">
-            <div class="col-12 col-lg-6 order-lg-last mb-5">
-                <p class="text-muted">Order Summary ({{ package_count }})</p>
+
+            <!-- ORDER SUMMARY -->
+            <!-- <div class="col-md-8"> -->
+            <div class="col-12 col-lg-4 order-lg-last mb-5 order-summary">
+                <p class="text-dark">Order Summary ({{ package_count }})</p>
                 <div class="row">
-                    <div class="col-7 offset-2">
-                        <p class="mb-1 mt-0 small text-muted">Item</p>
+                    <div class="col-5 offset-2">
+                        <p class="mb-1 mt-0 small">Item</p>
                     </div>
                     <div class="col-3 text-right">
-                        <p class="mb-1 mt-0 small text-muted">Subtotal</p>
+                        <p class="mb-1 mt-0 small">Subtotal</p>
                     </div>
                 </div>
                 {% for item in bag_items %}
                     <div class="row">
-                        <div class="col-2 mb-1">
-                            <a href="{% url 'package_detail' item.package.id %}">
-                                {% if item.package.image %}
-                                    <img class="w-100" src="{{ item.package.image.url }}" alt="{{ package.name }}">
-                                {% else %}
-                                    <img class="w-100" src="#" alt="{{ package.name }}">
-                                {% endif %}
-                            </a>
-                        </div>
-                        <div class="col-7">
+                        <div class="col-2 mb-1"></div>
+                        <div class="col-5">
                             <p class="my-0"><strong>{{ item.package.name }}</strong></p>
-                            <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                            <p class="my-0 small">Qty: {{ item.quantity }}</p>
                         </div>
                         <div class="col-3 text-right">
-                            <p class="my-0 small text-muted">${{ item.package.price | calc_subtotal:item.quantity }}</p>
+                            <p class="my-0 small">${{ item.package.price | calc_subtotal:item.quantity }}</p>
                         </div>
                     </div>
                 {% endfor %}
-                <hr class="my-0">
+                <hr>
                 <div class="row text-black text-right">
-                    <div class="col-7 offset-2">
+                    <div class="col-5 offset-2">
                         <p class="my-0">Order Total:</p>
                         <p class="my-0">Grand Total:</p>
                     </div>
@@ -58,6 +50,8 @@
                     </div>
                 </div>
             </div>
+
+            <!-- CHECKOUT DETAILS -->
             <div class="col-12 col-lg-6">
                 <p class="text-muted">Please fill out the form below to complete your order</p>
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
@@ -88,6 +82,8 @@
                             {% endif %}
                         </div>
                     </fieldset>
+
+                    <!-- STRIPE -->
                     <fieldset class="px-3">
                         <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
                         <!-- A Stripe card element will go here -->
@@ -97,18 +93,19 @@
                         <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
                     </fieldset>
 
-                    <div class="submit-button text-right mt-5 mb-2">                    
-                        <a href="{% url 'view_bag' %}" class="btn btn-outline-black rounded-0">
+                    <div class="submit-button text-right mt-5 mb-2"> 
+                        
+                        <a href="{% url 'view_bag' %}" class="btn btn-sm btn-outline-dark">
                             <span class="icon">
                                 <i class="fas fa-chevron-left"></i>
                             </span>
-                            <span class="font-weight-bold">Adjust Bag</span>
+                            <span class="text-uppercase">Adjust Bag</span>
                         </a>
-                        <button id="submit-button" class="btn btn-black rounded-0">
-                            <span class="font-weight-bold">Complete Order</span>
+                        <button id="submit-button" class="btn btn-sm btn-outline-dark">
                             <span class="icon">
-                                <i class="fas fa-lock"></i>
+                                <i class="fa-solid fa-unlock-keyhole"></i>
                             </span>
+                            <span class="text-uppercase">Complete Order</span>
                         </button>
                         <p class="small text-danger my-0">
                             <span class="icon">
