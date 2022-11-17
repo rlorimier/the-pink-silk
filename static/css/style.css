@@ -65,7 +65,7 @@ body {
 }
 
 .order-summary {
-    background: white;
+    background: rgba(255, 239, 239, 0.5);
 }
 
 /* ------------------------------- bootstrap toasts */
