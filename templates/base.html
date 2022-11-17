@@ -31,6 +31,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/b991a574e6.js" crossorigin="anonymous"></script>
+    <!-- Stripe -->
+    <script src="https://js.stripe.com/v3/" async></script>
     {% endblock %}
 
     <title>The Pink Silk</title>
@@ -184,10 +186,8 @@
     </footer>
     {% endblock %}
 
-    <!-- TOASTS -->
-
-
     {% block postloadjs %}
+    <!-- TOASTS -->
     <script type="text/javascript">
         $('.toast').toast('show');
     </script>
