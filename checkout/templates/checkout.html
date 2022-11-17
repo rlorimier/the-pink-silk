@@ -95,10 +95,15 @@
 
                         <!-- Used to display form errors -->
                         <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                        <p class="small text-danger my-0">
+                            <span class="icon">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </span>
+                            <span>Your card will be charged <strong>${{ grand_total|floatformat:2 }}</strong></span>
+                        </p>
                     </fieldset>
 
                     <div class="submit-button text-right mt-5 mb-2"> 
-                        
                         <a href="{% url 'view_bag' %}" class="btn btn-sm btn-outline-dark">
                             <span class="icon">
                                 <i class="fas fa-chevron-left"></i>
@@ -111,16 +116,8 @@
                             </span>
                             <span class="text-uppercase">Complete Order</span>
                         </button>
-                        <p class="small text-danger my-0">
-                            <span class="icon">
-                                <i class="fas fa-exclamation-circle"></i>
-                            </span>
-                            <span>Your card will be charged <strong>${{ grand_total|floatformat:2 }}</strong></span>
-                        </p>
                     </div>
                 </form>
-
-
             </div>
         </div>
     </div>
