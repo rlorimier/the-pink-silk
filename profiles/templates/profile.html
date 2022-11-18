@@ -16,7 +16,24 @@
 {% block content %}
     <div class="container pink-text">
         <div class="row">
-            {{ profile }}
+            <div class="col-8 col-lg-4">
+                <p><strong>Contact Information</strong></p>
+                <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <br>
+                    <button class="btn btn-sm btn-outline-dark rounded-0 text-uppercase float-right">Update Information</button>
+                </form>
+            </div>
+            <div class="col-8 col-lg-4">
+                <p><strong>Order History</strong></p>
+                {{ orders }}
+            </div>
         </div>
     </div>            
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
 {% endblock %}
