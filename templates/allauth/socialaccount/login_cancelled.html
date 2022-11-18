@@ -1,15 +1,34 @@
-{% extends "socialaccount/base.html" %}
+{% extends "base.html" %}
+{% load static %}
 
 {% load i18n %}
+{% load account socialaccount %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col text-center fw-bold fs-4 pink-text"></div>
+        </div>
+    </div>
+{% endblock %}
 
 {% block head_title %}{% trans "Login Cancelled" %}{% endblock %}
 
 {% block content %}
 
-<h1>{% trans "Login Cancelled" %}</h1>
+<div class="container pink-text">
+    <div class="row justify-content-start">
+        <div class="col-md-6 text-uppercase">
+            <h1>{% trans "Login Cancelled" %}</h1>
+            <hr>
+        </div>
+    </div>
 
-{% url 'account_login' as login_url %}
+    <div class="col-md-12">
+        {% url 'account_login' as login_url %}
 
-<p>{% blocktrans %}You decided to cancel logging in to our site using one of your existing accounts. If this was a mistake, please proceed to <a href="{{login_url}}">sign in</a>.{% endblocktrans %}</p>
-
+        <p>{% blocktrans %}You decided to cancel logging in to our site using one of your existing accounts. If this was a mistake, please proceed to 
+            <a href="{{login_url}}">sign in</a>.{% endblocktrans %}</p>
+    </div>
+</div>
 {% endblock %}
