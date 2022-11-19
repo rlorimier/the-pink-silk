@@ -1,0 +1,1 @@
+The Pink Silk Confirmation for Order Number {{ order.order_number }}
