@@ -78,7 +78,7 @@ def edit_package(request, package_id):
             return redirect(reverse('package_detail', args=[package.id]))
         else:
             messages.success(
-                request, 
+                request,
                 'Failed to update package. Please ensure the form is valid.')
     else:
         form = PackagesForm(instance=package)

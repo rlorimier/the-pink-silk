@@ -31,37 +31,17 @@
                                 <tr>
                                     <th class="text-uppercase" scope="row">{{ item.package.name }}</th>
                                     <td>${{ item.package.price }}</td>
-                                    <!-- <td>{{ item.quantity }}</td> -->
                                     <td class="py-3 w-25">
                                         <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                             {% csrf_token %}
                                             <div class="form-group">
                                                 <div class="input-group">
-                                                    <div class="input-group-prepend">
-                                                        <button class="decrement-qty btn btn-sm btn-black rounded-0" 
-                                                            data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
-                                                            <span>
-                                                                <i class="fas fa-minus fa-sm"></i>
-                                                            </span>
-                                                        </button>
-                                                    </div>
-                                                    <input class="form-control form-control-sm qty_input" type="number"
-                                                        name="quantity" value="{{ item.quantity }}" min="1" max="99"
-                                                        data-item_id="{{ item.item_id }}"
-                                                        id="id_qty_{{ item.item_id }}">
-                                                    <div class="input-group-append">
-                                                        <button class="increment-qty btn btn-sm btn-black rounded-0"
-                                                            data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
-                                                            <span>
-                                                                <i class="fas fa-plus fa-sm"></i>
-                                                            </span>
-                                                        </button>
-                                                    </div>
+                                                    <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ package.id }}" id="id_qty_{{ package.id }}">
                                                 </div>
                                             </div>
                                         </form>
-                                        <a class="update-link text-dark"><small>Update</small></a>
-                                        <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"><small>Remove</small></a>
+                                            <a class="update-link btn btn-outline-primary btn-sm">Update</a>
+                                            <a class="remove-item btn btn-outline-danger btn-sm" id="remove_{{ item.item_id }}">Remove</a>
                                     </td>
                                     <td>${{ item.package.price | calc_subtotal:item.quantity }}</td>
                                 </tr>
@@ -80,13 +60,6 @@
                         </table>
 
                         <table class="table table-borderless pink-text add-margin bag-total">
-                            <!-- <thead>
-                                <tr>
-                                    <h5 class="bag-total" >
-                                        <strong>Bag Total: $ {{ total|floatformat:2 }}</strong>
-                                    </h5>
-                                </tr>
-                            </thead> -->
                             <tbody>
                                 <tr class="table-borderless">
                                     <td></td>
