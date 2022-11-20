@@ -47,6 +47,8 @@ class StripeWH_Handler:
         bag = intent.metadata.bag
         save_info = intent.metadata.save_info
 
+        print(intent)
+
         billing_details = intent.charges.data[0].billing_details
         grand_total = round(intent.charges.data[0].amount / 100, 2)
 

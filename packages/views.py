@@ -1,5 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib import messages
 from .models import Packages
+from .forms import PackagesForm
 
 
 def all_packages(request):
@@ -24,3 +26,26 @@ def package_detail(request, package_id):
     }
 
     return render(request, 'package_detail.html', context)
+
+
+def add_package(request):
+    """ Add a product to the store """
+    if request.method == 'POST':
+        form = PackagesForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added new package!')
+            return redirect(reverse('add_package'))
+        else:
+            messages.success(
+                request,
+                'Failed to add package. Please ensure the form is valid.')
+    else:
+        form = PackagesForm()
+
+    template = 'add_package.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)

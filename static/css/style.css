@@ -90,3 +90,7 @@ body {
     overflow-x: hidden;
     overflow-y: auto;
 }
+
+.btt-padding {
+    padding-top: 30px;
+}
