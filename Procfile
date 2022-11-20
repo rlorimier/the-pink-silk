@@ -1,1 +1,1 @@
-web: gunicorn the-pink-silk.wsgi:application
+web: gunicorn pink_silk.wsgi:application
