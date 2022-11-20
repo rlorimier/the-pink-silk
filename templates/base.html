@@ -64,12 +64,12 @@
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Member Area </a>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Member Area</a>
                         <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="navbarDropdownMenuLink">
 
                         {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
-                            <li><a class="dropdown-item" href="{% url 'add_package' %}">Manage Packages</a></li>
+                            <li><a class="dropdown-item" href="{% url 'add_package' %}">Add New Package</a></li>
                             <li><hr class="dropdown-divider"></li>
                             {% endif %}
 
@@ -84,7 +84,7 @@
 
                     <li class="nav-item">
                         <a class="{% if grand_total %}text-danger font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
-                            <div class="text-center">
+                            <div class="text-right">
                                 <div>| <i class="fa-solid fa-bag-shopping"> </i>
                                 </div>
                             </div>
