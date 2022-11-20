@@ -13,3 +13,9 @@ def about(request):
 
     aboutus = ""
     return render(request, 'about.html', {'aboutus': aboutus})
+
+
+def handler404(request, exception):
+    """ Error Handler 404 - Page Not Found """
+
+    return render(request, "errors/404.html", status=404)

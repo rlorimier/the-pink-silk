@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from .views import handler404
 from . import views
 
 
@@ -22,3 +23,5 @@ urlpatterns = [
     path('', views.index, name='home'),
     path('about/', views.about, name='about'),
 ]
+
+handler404 = 'store.views.handler404'
