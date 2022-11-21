@@ -12,15 +12,16 @@
 {% block content %}
     <div class="container pink-text">
         <div class="row justify-content-start">
-            <div class="col-md-4 fw-bolder text-uppercase">
+            <div class="col-md-6 fw-bolder text-uppercase">
                 <h2>The page you are looking for isn't available</h2>
-            <div>
-            <a href="{% url 'home'%}">
-                <button class="btn btn-sm btn-outline-dark">Return to Home Page<i class="fas fa-chevron-right"></i></button>
-            </a>
-        </div>
-        <div class="col-md-8">
-            <hr>
+            </div>
+            <div class="my-5">
+                <a href="{% url 'home'%}">
+                    <button class="btn btn-sm btn-outline-dark">
+                        <i class="fas fa-chevron-left"></i> Return to Home Page
+                    </button>
+                </a>
+            </div>
         </div>
     </div>
 {% endblock %}
