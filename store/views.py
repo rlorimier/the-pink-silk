@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse
+from .forms import ContactForm
+from django.contrib import messages
 
 
-# Create your views here.
 def index(request):
     """A view to show the home page"""
 
@@ -13,3 +14,24 @@ def about(request):
 
     aboutus = ""
     return render(request, 'about.html', {'aboutus': aboutus})
+
+
+def contact(request):
+    """A view to show the contact form page"""
+
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Contact request received!')
+            return redirect(reverse('contact'))
+        else:
+            messages.success(
+                request,
+                'Contact request failed. Please ensure the form is valid!')
+
+    else:
+        form = ContactForm()
+
+    return render(request, "contact.html", {'form': form})
