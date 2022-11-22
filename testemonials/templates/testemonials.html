@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+{% load crispy_forms_tags %}
+
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col-md-8 card mb-4  mt-3 left  top">
+
+      <div class="card-body">
+        <h1>{% block title %} {{ post.title }} {% endblock title %}</h1>
+        <p class="text-muted">{{ post.author }} | {{ post.created_on }}</p>
+
+        <div class="image-container">
+          {% if "placeholder" in post.featured_image.url %}
+            <img class="card-img-top"
+              src="https://images.pexels.com/photos/159866/books-book-pages-read-literature-159866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              alt="Book cover unavailable">
+          {% else %}
+            <img class="card-img-top" src="{{ post.featured_image.url }}" alt="Book cover image">
+          {% endif %}
+
+            <div class="image-flash">
+                <p class="author">Author: {{ post.author }}</p>
+            </div>
+        </div>
+
+        <p class="card-text">{{ post.excerpt|linebreaksbr }}</p>
+      
+
+        <div>
+          {% if user.is_authenticated %}
+          <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
+            {% csrf_token %}
+            {% if liked %}
+            <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like">
+              <i class="fas fa-heart"></i>
+            </button>
+            {% else %}
+            <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like">
+              <i class="far fa-heart"></i>
+            </button>
+            {% endif %}
+          </form>
+          {% else %}
+          <span class="text-secondary"><i class="far fa-heart"> </i></span>
+          {% endif %}
+          <span class="text-secondary">{{ post.number_of_likes }}</span>
+        </div>
+
+      </div>
+      <hr>
+      <div class="card-body">
+        <h3>Comments...</h3>
+
+        {% if not post.comments.all %}
+        <p>No Comments yet!</p>
+
+        {% else %}
+          {% for comment in post.comments.all %}
+          <div class="list-group-item">
+            <p class="card-subtitle text-muted">{{ comment.name }} | {{ comment.created_on }}</p>
+            <p>{{ comment.body }}</p>
+          </div>
+          {% endfor %}
+        
+        {% endif %}
+
+        <br>
+
+        {% if commented %}
+        <div class="alert alert-success" id="msg" role="alert">Thanks for your comment</div>
+        {% else %}
+          {% if user.is_authenticated %}
+          <h4>Leave a comment:</h4>
+          <p>Posting as: {{ user.username }}</p>
+          <form method="post" style="margin-top: 1.3em;">
+            {{ comment_form | crispy }}
+            {% csrf_token %}
+            <button type="submit" class="btn btn-outline-dark btn-sm">Submit</button>
+          </form>
+          {% else %}
+          <p>To leave a comment, please 
+            <a class="text-black" href="{% url 'account_login' %}">Login</a> or
+            <a class="text-black" href="{% url 'account_signup' %}">Register</a></p>
+          {% endif %}
+        {% endif %}
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<br>
+{% endblock content %}
