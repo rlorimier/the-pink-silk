@@ -20,6 +20,23 @@ def all_testemonials(request):
     return render(request, 'testemonials.html', context)
 
 
+def new_testemonial(request):
+
+    if request.method == "POST":
+        form = TestemonialForm(request.POST)
+        if form.is_valid():
+            testemonial = form.save(commit=False)
+            testemonial.author = request.user
+            testemonial.created_on = timezone.now()
+            testemonial.save()
+            return redirect('testemonials')
+        else:
+            messages.success(request, 'Failed to add new post.')
+
+    else:
+        form = TestemonialForm()
+
+    return render(request, 'new_testemonial.html', {'form': form})
 
 
 

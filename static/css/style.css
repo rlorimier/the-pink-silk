@@ -68,6 +68,10 @@ body {
     background: rgba(255, 239, 239, 0.5);
 }
 
+footer {
+    width: 100%;
+}
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
@@ -93,6 +97,16 @@ body {
 
 .btt-padding {
     padding-top: 20px;
+}
+
+.comment-box {
+    background: rgba(255, 239, 239, 0.5);
+}
+
+.comment-box p {
+    padding-top: 5px;
+    padding-left: 5px;
+    margin-bottom: 3px;
 }
 
 /* Mailchimp */

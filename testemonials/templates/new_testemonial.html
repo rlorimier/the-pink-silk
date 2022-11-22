@@ -13,11 +13,11 @@
 <div class="container pink-text">
     <div class="row">
         <div class="col-10 col-lg-6">
-            <form method="POST" action="{% url 'add_package' %}" class="form mb-2" enctype="multipart/form-data">
+            <form method="POST" action="{% url 'new_testemonial' %}" class="form mb-2" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form | crispy }}
                 <div class="text-right btt-padding">
-                    <a class="btn btn-sm btn-outline-dark rounded-0" href="{% url 'packages' %}">Cancel</a>
+                    <a class="btn btn-sm btn-outline-dark rounded-0" href="{% url 'testemonials' %}">Cancel</a>
                     <button class="btn btn-sm btn-outline-dark rounded-0" type="submit">Add New Testemonial</button>
                 </div>
             </form>
