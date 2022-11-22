@@ -66,7 +66,7 @@
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'about' %}">About |</a>
+                        <a class="nav-link" href="{% url 'about' %}">Testemonials |</a>
                     </li>
 
                     <li class="nav-item">
@@ -142,7 +142,7 @@
         <div class="card-group pink-silk">
             <div class="card">
                 <div class="card-body pink-silk">
-                    <h5 class="card-title text-center pink-text">Contact Us</h5>
+                    <h5 class="card-title text-center pink-text">Get in Touch</h5>
                     <div class="card-body">
                         <table class="table">
                             <tbody>
@@ -171,11 +171,9 @@
                     </div>
                 </div>
             </div>
-
             <div class="card">
                 <div class="card-body pink-silk">
                     <h5 class="card-title text-center pink-text">Subscribe</h5>
-
                     <!-- Mailchimp Signup Form -->
                     <div class="pink-silk" id="mc_embed_signup">
                         <form action="https://herokuapp.us21.list-manage.com/subscribe/post?u=da283f7c513eee1b6d5d69780&amp;id=8646aaf11b&amp;f_id=00d5c2e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -183,7 +181,6 @@
                                 <div class="mc-field-group">
                                     <label for="mce-EMAIL">Your email:  <span class="asterisk">*</span></label>
                                     <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
-                                    
                                 </div>
                                 <div id="mce-responses" class="clear foot">
                                     <div class="response" id="mce-error-response" style="display:none"></div>
@@ -203,32 +200,27 @@
                         </form>
                     </div>
                     <!--End mc_embed_signup-->
-
-
-                    
+                    <hr>
                 </div>
             </div>
-
             <div class="card">
                 <div class="card-body text-center pink-silk">
                    <h5 class="card-title text-center pink-text">Find Us</h5>
                    <div class="card-body text-center">
-                        <p>Crone Woods, Crone, Co. Wicklow</p>
+                        <p><small> Crone Woods, Crone, Co. Wicklow</small></p>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d612371.779190389!2d-6.226643!3d53.162653!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2b831f3332cec4f9!2sCrone%20Woods!5e0!3m2!1sen!2sie!4v1669123074999!5m2!1sen!2sie" width="300" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-                    <hr>
-                    <h5 class="card-title text-center pink-text">Follow Us</h5>
-                    <div class="card-body text-center">
-                        <a href="http://facebook.com" target="_blank" rel="noopener noreferrer" class="findus-btn">
-                            <i class="fa fa-facebook-square fa-2x pink-text" aria-hidden="true"></i>
+                    <div class="text-center">
+                        <a href="http://facebook.com" target="_blank" rel="noopener noreferrer" class="text-center findus-btn">
+                            <i class="fa-brands fa-2x fa-facebook pink-text"></i>
                         </a>
-                        <a href="http://instagram.com" target="_blank" rel="noopener noreferrer" class="findus-btn">
-                            <i class="fa fa-instagram fa-2x pink-text" aria-hidden="true"></i>
+                        <a href="http://instagram.com" target="_blank" rel="noopener noreferrer" class="text-center findus-btn">
+                            <i class="fa-brands fa-instagram fa-2x pink-text"></i>
                         </a>
-                    </div>             
+                    </div>
                 </div>
             </div>
         </div>
-
         <p class="m-0 pink-text text-center ">Copyright &copy; The Pink Silk</p>
     </footer>
     {% endblock %}
@@ -240,7 +232,6 @@
     </script>
     <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
     <script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-
     {% endblock %}
 
 </body>
