@@ -1,8 +1,10 @@
 from django.contrib import admin
 from .models import Packages
 
-# Register your models here.
+
 class PackagesAdmin(admin.ModelAdmin):
+    """ To show only necessary itens on admin panel """
+
     list_display = (
         'name',
         'price',
@@ -10,5 +12,6 @@ class PackagesAdmin(admin.ModelAdmin):
     )
 
     ordering = ('-price',)
+
 
 admin.site.register(Packages, PackagesAdmin)

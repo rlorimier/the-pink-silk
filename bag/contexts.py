@@ -5,6 +5,7 @@ from packages.models import Packages
 
 
 def bag_contents(request):
+    """ Creates a bag view """
 
     bag_items = []
     grand_total = total = 0

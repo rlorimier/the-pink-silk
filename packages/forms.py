@@ -3,6 +3,7 @@ from .models import Packages
 
 
 class PackagesForm(forms.ModelForm):
+    """ Form to Packages Form that uses all fields """
 
     class Meta:
         model = Packages

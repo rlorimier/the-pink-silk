@@ -2,6 +2,7 @@ from django.db import models
 
 
 class Packages(models.Model):
+    """ Creates a packages model """
 
     class Meta:
         verbose_name_plural = 'Packages'
