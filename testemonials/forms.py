@@ -1,4 +1,4 @@
-from .models import Comment, Post
+from .models import Comment, Testemonial
 from django import forms
 
 
@@ -8,7 +8,7 @@ class CommentForm(forms.ModelForm):
         fields = ('body',)
 
 
-class PostForm(forms.ModelForm):
+class TestemonialForm(forms.ModelForm):
     class Meta:
-        model = Post
+        model = Testemonial
         fields = ('title', 'author', 'content',)

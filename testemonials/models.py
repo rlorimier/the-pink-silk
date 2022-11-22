@@ -1,14 +1,12 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.utils.text import slugify
 
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
 
-class Post(models.Model):
+class Testemonial(models.Model):
     title = models.CharField(max_length=200, unique=True)
-    slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="blog_posts")
     content = models.TextField()
@@ -26,15 +24,10 @@ class Post(models.Model):
     def number_of_likes(self):
         return self.likes.count()
 
-    def save(self, *args, **kwargs):
-        if not self.slug:
-            self.slug = slugify(self.title)
-        return super().save(*args, **kwargs)
-
 
 class Comment(models.Model):
-    post = models.ForeignKey(
-        Post, on_delete=models.CASCADE, related_name="comments")
+    testemonial = models.ForeignKey(
+        Testemonial, on_delete=models.CASCADE, default=True, related_name="comments")
     name = models.CharField(max_length=80)
     email = models.EmailField()
     body = models.TextField()

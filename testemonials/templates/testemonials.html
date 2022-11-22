@@ -9,81 +9,24 @@
     </div>
 {% endblock %}
 
+
 <!-- *************************************************************************  -->
 {% block content %}
-    <div class="container pink-text">
+    <div class="container">
 
         <!-- TESTEMONIALS -->
         {% for testemonial in testemonials %}
         <div class="row justify-content-start">
-            <div class="col-md-4 fw-bolder text-uppercase">
-                <h2 >{{ testemonial.title }}</h2>
+            <div class="col-md-4 pink-text">
+                <h4 class="fw-bold text-uppercase">{{ testemonial.title }}</h4>
                 <p class="text-muted">{{ testemonial.author }} | {{ testemonial.created_on }}</p>
             </div>
         </div>
         <div class="col-md-8">
-            <p class="card-text">{{ testemonial.content|linebreaksbr }}</p>
+            <p class="card-text">{{ testemonial.content | linebreaksbr }}</p>
         </div>
-        <div>
-            <a href="{% url 'package_detail' package.id %}">
-                <button class="btn btn-sm btn-outline-dark">Find out more <i class="fas fa-chevron-right"></i></button>
-            </a>
-        </div>
-
-        <!-- LIKES -->
-        <div class="col-md-8">
-            {% if user.is_authenticated %}
-            <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
-            {% csrf_token %}
-                {% if liked %}
-                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like">
-                <i class="fas fa-heart"></i>
-                </button>
-                {% else %}
-                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like">
-                <i class="far fa-heart"></i>
-                </button>
-                {% endif %}
-            </form>
-            {% else %}
-            <span class="text-secondary"><i class="far fa-heart"> </i></span>
-            {% endif %}
-            <span class="text-secondary">{{ testemonial.number_of_likes }}</span>
-        </div>
-
-        <!-- COMMENTS -->
-        <div class="card-body">
-            <h5>Comments</h5>
-            {% if not post.comments.all %}
-            <p>No Comments yet!</p>
-            {% else %}
-                {% for comment in post.comments.all %}
-                <div class="list-group-item">
-                    <p class="card-subtitle text-muted">{{ comment.name }} | {{ comment.created_on }}</p>
-                    <p>{{ comment.body }}</p>
-                </div>
-                {% endfor %}
-            {% endif %}
-            <br>
-            {% if commented %}
-            <div class="alert alert-success" id="msg" role="alert">Thanks for your comment</div>
-            {% else %}
-                {% if user.is_authenticated %}
-                <h5>Leave a comment:</h5>
-                <p>Posting as: {{ user.username }}</p>
-                <form method="post" style="margin-top: 1.3em;">
-                    {% csrf_token %}
-                    {{ comment_form | crispy }}
-                    <button type="submit" class="btn btn-outline-dark btn-sm">Submit</button>
-                </form>
-                {% else %}
-                <p>To leave a comment, please 
-                    <a class="text-black" href="{% url 'account_login' %}">Login</a> or
-                    <a class="text-black" href="{% url 'account_signup' %}">Register</a>
-                </p>
-                {% endif %}
-            {% endif %}
-        </div>
+        <hr class="col-md-8">
+        
         {% endfor %}
     </div>
 {% endblock %}
