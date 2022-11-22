@@ -77,18 +77,18 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Member Area</a>
                         <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="navbarDropdownMenuLink">
 
-                        {% if request.user.is_authenticated %}
-                            {% if request.user.is_superuser %}
-                            <li><a class="dropdown-item" href="{% url 'add_package' %}">Add New Package</a></li>
-                            <li><hr class="dropdown-divider"></li>
+                            {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                <li><a class="dropdown-item" href="{% url 'add_package' %}">Add New Package</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                {% endif %}
+                            <li><a class="dropdown-item" href="{% url 'profile' %}">My Profile</a></li>
+                            <li><a class="dropdown-item" href="{% url 'account_logout' %}">New Testemonial</a></li>
+                            <li><a class="dropdown-item" href="{% url 'account_logout' %}">Sign Out</a></li>
+                            {% else %}
+                            <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>
+                            <li><a class="dropdown-item" href="{% url 'account_login' %}">Sign In</a></li>
                             {% endif %}
-
-                        <li><a class="dropdown-item" href="{% url 'profile' %}">My Profile</a></li>
-                        <li><a class="dropdown-item" href="{% url 'account_logout' %}">Sign Out</a></li>
-                        {% else %}
-                        <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>
-                        <li><a class="dropdown-item" href="{% url 'account_login' %}">Sign In</a></li>
-                        {% endif %}
                         </ul>
                     </li>
 

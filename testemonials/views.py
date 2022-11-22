@@ -8,14 +8,14 @@ from .models import Post
 from .forms import CommentForm, PostForm
 
 
-class PostList(generic.ListView):
+class Testemonials(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by("-created_on")
     template_name = "testemonials.html"
     paginate_by = 6
 
 
-class Testemonials(View):
+class PostList(View):
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
@@ -26,7 +26,7 @@ class Testemonials(View):
 
         return render(
             request,
-            "post_detail.html",
+            "testemonials.html",
             {
                 "post": post,
                 "comments": comments,
@@ -57,7 +57,7 @@ class Testemonials(View):
 
         return render(
             request,
-            "post_detail.html",
+            "testemonials.html",
             {
                 "post": post,
                 "comments": comments,
