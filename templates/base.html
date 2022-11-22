@@ -48,11 +48,15 @@
     <!-- NAV BAR -->
     <nav class="navbar navbar-expand-lg navbar-light pink-silk">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}">
-                <img src="{{ MEDIA_URL }}images/wallpaper_cover_small.png" alt="The Pink Silk Spa" height="70">
+            <a class="navbar-brand logo-brand" href="{% url 'home' %}">
+                <img src="{{ MEDIA_URL }}images/wallpaper_cover_small.png" alt="The Pink Silk" height="50">
             </a>
             
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+
+            <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarResponsive">
                 <ul class="navbar-nav h5 ">
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'home' %}">Home |</a>
