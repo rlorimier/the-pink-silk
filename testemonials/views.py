@@ -10,8 +10,27 @@ from .forms import CommentForm, TestemonialForm
 
 def all_testemonials(request):
     """ A view to show all the testimonials """
-
     testemonials = Testemonial.objects.all()
+    
+    if request.method == "POST":
+        comment = CommentForm(data=request.POST)
+
+        if comment.is_valid():
+            #comment.name = request.name
+            #comment.body = request.body
+            comment.save()
+        else:
+            comment = CommentForm()
+
+        context = {
+            "testemonials": testemonials,
+            "comment": comment,
+            "form": CommentForm()
+        }
+
+        return render(request, "testemonials.html", context)
+
+    
 
     context = {
         'testemonials': testemonials,
@@ -19,6 +38,26 @@ def all_testemonials(request):
     }
 
     return render(request, 'testemonials.html', context)
+
+# def comment(request):
+
+#     if request.method == "POST":
+#         comment = CommentForm(data=request.POST)
+
+#         if comment.is_valid():
+#             comment.name = request.name
+#             comment.body = request.body
+#             comment.save()
+#         else:
+#             comment = CommentForm()
+
+#         context = {
+#             "testemonials": testemonials,
+#             "comment": comment,
+#             "form": CommentForm()
+#         }
+
+#         return render(request, "testemonials.html", context)
 
 
 def new_testemonial(request):
@@ -44,11 +83,6 @@ def new_testemonial(request):
 
 
 
-# class all_testemonials(generic.ListView):
-#     model = Testemonial
-#     queryset = Testemonial.objects.filter(status=1).order_by("-created_on")
-#     template_name = "testemonials.html"
-#     paginate_by = 6
 
 
 # class PostList(View):
