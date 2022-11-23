@@ -15,6 +15,7 @@ def all_testemonials(request):
 
     context = {
         'testemonials': testemonials,
+        'form': CommentForm()
     }
 
     return render(request, 'testemonials.html', context)
@@ -35,7 +36,7 @@ def new_testemonial(request):
 
     else:
         form = TestemonialForm()
-
+    
     return render(request, 'new_testemonial.html', {'form': form})
 
 
