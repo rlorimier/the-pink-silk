@@ -72,6 +72,10 @@ footer {
     width: 100%;
 }
 
+iframe {
+    width: 90%;
+}
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {

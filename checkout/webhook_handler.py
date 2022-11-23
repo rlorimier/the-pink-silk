@@ -15,7 +15,7 @@ class StripeWH_Handler:
     def __init__(self, request):
         self.request = request
 
-    def _send_confirmation_email(self, order):
+    def send_confirmation_email(order):
         """Send the user a confirmation email"""
         cust_email = order.email
         subject = render_to_string(
@@ -85,6 +85,7 @@ class StripeWH_Handler:
                     original_bag=bag,
                     stripe_pid=pid,
                 )
+                print(order)
                 order_exists = True
                 break
             except Order.DoesNotExist:
