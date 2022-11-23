@@ -9,7 +9,7 @@ from .forms import CommentForm, TestemonialForm
 
 
 def all_testemonials(request):
-    """A view to show all the package options available"""
+    """ A view to show all the testimonials """
 
     testemonials = Testemonial.objects.all()
 
@@ -22,6 +22,7 @@ def all_testemonials(request):
 
 
 def new_testemonial(request):
+    """ A view to add new testimonials """
 
     if request.method == "POST":
         form = TestemonialForm(request.POST)
@@ -30,13 +31,14 @@ def new_testemonial(request):
             testemonial.author = request.user
             testemonial.created_on = timezone.now()
             testemonial.save()
+            messages.success(request, 'Successfully added new testimonial!')
             return redirect('testemonials')
         else:
-            messages.success(request, 'Failed to add new post.')
+            messages.success(request, 'Failed to add new testimonial.')
 
     else:
         form = TestemonialForm()
-    
+
     return render(request, 'new_testemonial.html', {'form': form})
 
 

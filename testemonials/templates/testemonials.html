@@ -17,9 +17,10 @@
         <!-- TESTEMONIALS -->
         {% for testemonial in testemonials %}
         <div class="row justify-content-start">
-            <div class="col-md-4">
+            <div class="col-md-8">
                 <h4 class="fw-bold text-uppercase">{{ testemonial.title }}</h4>
-                <p class="text-muted">{{ testemonial.author }} | {{ testemonial.created_on }}</p>
+                <p class="text-muted">Published by:
+                    <span class="text-uppercase">{{ testemonial.author }} |</span> {{ testemonial.created_on }}</p>
             </div>
         </div>
         <div class="col-md-8">
