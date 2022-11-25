@@ -4,99 +4,54 @@
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
-            <div class="col text-center fw-bold fs-4 pink-text">testemonials</div>
+            <div class="col text-center fw-bold fs-4 pink-text">testimonials</div>
         </div>
     </div>
 {% endblock %}
 
-
-<!-- *************************************************************************  -->
 {% block content %}
-    <div class="container pink-text">
+<div class="container pink-text">
 
-        <!-- TESTIMONIALS -->
-        {% for testemonial in testemonials %}
-        <div class="row justify-content-start">
-            <div class="col-md-8">
-                <h4 class="fw-bold text-uppercase">{{ testemonial.title }}</h4>
-                <p class="text-muted">Published by:
-                    <span class="text-uppercase">{{ testemonial.author }} |</span> {{ testemonial.created_on }}</p>
-            </div>
-        </div>
+    <!-- TESTIMONIALS -->
+    {% for testemonial in testemonials %}
+    <div class="row justify-content-start">
         <div class="col-md-8">
-            <p class="card-text">{{ testemonial.content|linebreaksbr }}</p>
-        </div>
-        <br>
-
-        <!-- COMMENTS -->
-        <div>
-            <p class="fs-6 fw-bold">Comments:</p>
-            {% if not testemonial.comments.all %}
-            <p>No Comments yet!</p>
-            {% else %}
-                {% for comment in testemonial.comments.all %}
-                <div class="col-md-6 comment-box">
-                    <p class="text-muted">{{ comment.name }} | {{ comment.created_on }}</p>
-                    <p>{{ comment.body }}</p>
-                </div>
-                {% endfor %}
-            {% endif %}
-            
-            {% if commented %}
-            <div class="alert alert-success" id="msg" role="alert">Thanks for your comment</div>
-            {% else %}
-            <br>
-                <p class="fs-6 fw-bold">Leave a comment:</p>
-                <form method="POST" action="{% url 'testemonials' %}" class="form mb-2 col-md-6" enctype="multipart/form-data" style="margin-top: 1.3em;">
-                    {% csrf_token %}
-                    {{ form | crispy }}
-                    <button type="submit" class="btn btn-outline-dark btn-sm">Submit</button>
-                </form>
-            {% endif %}
-
-            <hr class="col-md-8">
-            {% endfor %}
+            <h4 class="fw-bold text-uppercase">{{ testemonial.title }}</h4>
+            <p class="text-muted">Published by:
+                <span class="text-uppercase">{{ testemonial.author }} |</span> {{ testemonial.created_on }}</p>
         </div>
     </div>
+    <div class="col-md-8">
+        <p class="card-text">{{ testemonial.content|linebreaksbr }}</p>
+    </div>
+    <br>
+
+    <!-- COMMENTS -->
+        <p class="fs-6 fw-bold">Comments:</p>
+        {% if not testemonial.comments.all %}
+        <p>No Comments yet!</p>
+        {% else %}
+            {% for comment in testemonial.comments.all %}
+            <div class="col-md-6 comment-box">
+                <p class="text-muted">{{ comment.name }} | {{ comment.created_on }}</p>
+                <p>{{ comment.body }}</p>
+            </div>
+            {% endfor %}
+        {% endif %}
+        
+        {% if commented %}
+        <div class="alert alert-success" id="msg" role="alert">Thanks for your comment</div>
+        {% else %}
+        <br>
+            <p class="fs-6 fw-bold">Leave a comment:</p>
+            <form method="POST" action="{% url 'testemonials' %}" class="form mb-2 col-md-6" enctype="multipart/form-data" style="margin-top: 1.3em;">
+                {% csrf_token %}
+                {{ form | crispy }}
+                <button type="submit" class="btn btn-outline-dark btn-sm">Submit</button>
+            </form>
+        {% endif %}
+
+        <hr class="col-md-8">
+    {% endfor %}
+</div>
 {% endblock %}
-<!-- *************************************************************************  -->
-
-
-
-
-
-
-
-        <!-- COMMENTS -->
-        <!-- <div class="card-body">
-            <h5>Comments</h5>
-            {% if not post.comments.all %}
-            <p>No Comments yet!</p>
-            {% else %}
-                {% for comment in post.comments.all %}
-                <div class="list-group-item">
-                    <p class="card-subtitle text-muted">{{ comment.name }} | {{ comment.created_on }}</p>
-                    <p>{{ comment.body }}</p>
-                </div>
-                {% endfor %}
-            {% endif %}
-            <br>
-            {% if commented %}
-            <div class="alert alert-success" id="msg" role="alert">Thanks for your comment</div>
-            {% else %}
-                {% if user.is_authenticated %}
-                <h5>Leave a comment:</h5>
-                <p>Posting as: {{ user.username }}</p>
-                <form method="post" style="margin-top: 1.3em;">
-                    {% csrf_token %}
-                    {{ comment_form | crispy }}
-                    <button type="submit" class="btn btn-outline-dark btn-sm">Submit</button>
-                </form>
-                {% else %}
-                <p>To leave a comment, please 
-                    <a class="text-black" href="{% url 'account_login' %}">Login</a> or
-                    <a class="text-black" href="{% url 'account_signup' %}">Register</a>
-                </p>
-                {% endif %}
-            {% endif %}
-        </div>
