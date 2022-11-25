@@ -14,7 +14,9 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Contact',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(
+                    auto_created=True, primary_key=True,
+                    serialize=False, verbose_name='ID')),
                 ('full_name', models.CharField(max_length=80)),
                 ('email_address', models.EmailField(max_length=80)),
                 ('message', models.TextField(max_length=5000)),

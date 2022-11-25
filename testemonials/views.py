@@ -1,9 +1,7 @@
-from django.shortcuts import render, get_object_or_404, reverse, redirect
+from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.utils import timezone
-from django.views import generic, View
-from django.http import HttpResponseRedirect
 from .models import Testemonial
 from .forms import CommentForm, TestemonialForm
 
@@ -38,6 +36,7 @@ def all_testemonials(request):
     return render(request, 'testemonials.html', context)
 
 
+@login_required
 def new_testemonial(request):
     """ A view to add new testimonials """
 
