@@ -17,8 +17,10 @@ def all_testemonials(request):
 
         if comment.is_valid():
             comment.save()
+            messages.success(request, 'Successfully added new comment!')
         else:
             comment = CommentForm()
+            messages.success(request, 'Failed to add new comment!')
 
         context = {
             "testemonials": testemonials,
