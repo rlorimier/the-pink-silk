@@ -128,6 +128,11 @@ You can check the store page clicking [HERE](https://the-pink-silk.herokuapp.com
 ## Credits
 
 
+### Code
+
+* Code based on and developed from Code Institute's walkthrough Boutique Ado.
+
+
 ### Content
 
 * Background image from [Pexels](https://www.pexels.com/).
@@ -136,7 +141,7 @@ You can check the store page clicking [HERE](https://the-pink-silk.herokuapp.com
 
 
 ## User Stories
-
+*It can also be viewed on my [GITHUB](https://github.com/users/rlorimier/projects/1/views/1) page*
 
 ### As Visitor:
 
@@ -158,7 +163,7 @@ You can check the store page clicking [HERE](https://the-pink-silk.herokuapp.com
 
   Option available at the navigation bar, Member Area - Register.
 
-* i want to know more about the Spa and it's cancelation policy.
+* I want to know more about the Spa and it's cancelation policy.
 
   Option available by clicking on Discover at the home page.
 
@@ -278,7 +283,7 @@ The project was deployed using Heroku. The process is as follows:
 
 Once you have signed up to Heroku, on the top right of the dashboard there is a button labelled 'New'. This will open a dropdown; please select 'Create new app'. On the next page you can choose your region and a name for the project. Then click 'Create app'.
 
-On the next page there is a menu along the top. Navigate to 'Settings', where you will find the config vars. Scroll down to the section named 'Config vars' and click on the button labelled 'Reveal config vars'. Cloudinary and Postgres will both need config vars as per your own details. You will also need to set a secret key. Once the config vars are saved, back in Gitpod save them in an env.py file. Make sure to add env.py to your .gitignore list so that your config vars do not become publically available on Github.
+On the next page there is a menu along the top. Navigate to 'Settings', where you will find the config vars. Scroll down to the section named 'Config vars' and click on the button labelled 'Reveal config vars'. All keys, secret keys and database url must be included in this section in order to the project work.
 
 If you scroll back to the top of the page you will find the 'Deploy' tab, which has multiple options for deployment. As I am using Github for this project, I selected it and a bar came up to search for the repo I wish to connect to.
 

@@ -44,7 +44,7 @@
         {% else %}
         <br>
             <p class="fs-6 fw-bold">Leave a comment:</p>
-            <form method="POST" action="{% url 'testemonials' %}" class="form mb-2 col-md-6" enctype="multipart/form-data" style="margin-top: 1.3em;">
+            <form method="POST" action="{% url 'comment_testemonial' testemonial.id %}" class="form mb-2 col-md-6" enctype="multipart/form-data" style="margin-top: 1.3em;">
                 {% csrf_token %}
                 {{ form | crispy }}
                 <button type="submit" class="btn btn-outline-dark btn-sm">Submit</button>

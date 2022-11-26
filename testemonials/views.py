@@ -10,23 +10,6 @@ def all_testemonials(request):
     """ A view to show all the testimonials """
 
     testemonials = Testemonial.objects.all()
-    if request.method == "POST":
-        comment = CommentForm(data=request.POST)
-
-        if comment.is_valid():
-            comment.save()
-            messages.success(request, 'Successfully added new comment!')
-        else:
-            comment = CommentForm()
-            messages.success(request, 'Failed to add new comment!')
-
-        context = {
-            "testemonials": testemonials,
-            "comment": comment,
-            "form": CommentForm()
-        }
-
-        return render(request, "testemonials.html", context)
 
     context = {
         'testemonials': testemonials,
@@ -34,6 +17,32 @@ def all_testemonials(request):
     }
 
     return render(request, 'testemonials.html', context)
+
+
+def comment_testemonial(request, pk):
+    """ A view to show the coments on every testemonial """
+
+    testemonial = Testemonial.objects.get(pk=pk)
+    if request.method == "POST":
+        comment = CommentForm(data=request.POST)
+
+        if comment.is_valid():
+            comment = comment.save(commit=False)
+            comment.testemonial = testemonial
+            comment.save()
+            messages.success(request, 'Successfully added new comment!')
+        else:
+            comment = CommentForm()
+            messages.success(request, 'Failed to add new comment!')
+
+    testemonials = Testemonial.objects.all()
+    context = {
+        "testemonials": testemonials,
+        "comment": comment,
+        "form": CommentForm()
+    }
+
+    return render(request, "testemonials.html", context)
 
 
 @login_required

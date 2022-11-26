@@ -6,7 +6,7 @@ from .models import Testemonial, Comment
 class TestemonialAdmin(admin.ModelAdmin):
     """ Admin panel for Testimonials """
 
-    list_display = ('title', 'status', 'created_on')
+    list_display = ('title', 'status', 'created_on', 'pk')
     search_fields = ['title', 'content']
     list_filter = ('status', 'created_on')
 

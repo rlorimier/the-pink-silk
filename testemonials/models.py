@@ -39,7 +39,7 @@ class Comment(models.Model):
 
     testemonial = models.ForeignKey(
         Testemonial, on_delete=models.CASCADE,
-        default=True, related_name="comments")
+        related_name="comments")
     name = models.CharField(max_length=80)
     email = models.EmailField()
     body = models.TextField()
