@@ -20,12 +20,20 @@ You can check the store page clicking [HERE](https://the-pink-silk.herokuapp.com
 
 * Created in Django using Gitpod.
 * Deployed in Heroku for online interaction.
+* Used AWS to store media files.
 
 
 ### User features
 
+
+#### NAVBAR
+
+![NAVBAR](media/images/navbar-home.png)
+
+
 * Home button, on the navigation bar at the top left, bringing the user back to the home page.
-* About button, on the navigation bar at the top left, leading the user to a new page containing information about how the blog was created.
+* Spa Packages button, on the navigation bar at the top left, leading the user to a new page containing a brief information about the available packages.
+
 * Option to register/sign in on the blog clicking on the respective button from the navigation bar on the top left.
 ![Navbar-Login](media/images/navbar-login.png)
 
@@ -41,10 +49,6 @@ You can check the store page clicking [HERE](https://the-pink-silk.herokuapp.com
 * Read more button, on botton of every post, giving the user the possibility of reading the full review.
 ![Readmore-btn](media/images/readmore-btn.png)
 
-
-### To be implemented 
-
-* F
 
 
 
@@ -70,7 +74,9 @@ You can check the store page clicking [HERE](https://the-pink-silk.herokuapp.com
 * [Heroku](https://www.heroku.com) for deployment
 * [ElephantSQL](https://www.elephantsql.com/) for database
 * [Favicon](https://favicon.io/) for favicon
-* [Pexels](https://www.pexels.com/) for background image
+* [Pexels](https://www.pexels.com/) for images
+* [AWS](https://aws.amazon.com/) for media storage
+* [Mailchimp](https://mailchimp.com/) for email newslatter subscription
 
 
 
@@ -92,8 +98,7 @@ You can check the store page clicking [HERE](https://the-pink-silk.herokuapp.com
 
 ### Content
 
-* Book reviews from [Goodreads](https://www.goodreads.com/) website.
-* Book cover images from [Google](http://www.google.com)
+* Background image from [Pexels](https://www.pexels.com/).
 
 
 
@@ -172,15 +177,11 @@ Manual testing result:
 
 ### Code Testing
 
-* Python - [PythonChecker](https://www.pythonchecker.com/)
+* Python - [PIP8](https://pep8ci.herokuapp.com/)
 
 All .py files were individualy tested, with the exception of settings.py, as some of the lines are longer than 79 characters but they are required for functionality of the website.
 
-![Python-testing](media/images/python-testing.png)
-
 * HTML - [W3C](https://validator.w3.org/nu/)
-
-W3C Validator shows one error on the HTML, however it cannot be fixed. The closing div tag mentioned is the one after the endblock content on base.html and if removed the css classes will not be applied.
 
 ![HTML-testing](media/images/html-testing.png)
 
@@ -196,7 +197,7 @@ W3C Validator shows one error on the HTML, however it cannot be fixed. The closi
 
 ### Accessibility Testing
 
-* Tested using [Accessibility Test](https://accessibilitytest.org/). <br>You can check the full test result clicking [HERE](https://accessibilitytest.org/results/YTL9u9vvs41X).
+* Tested using [Accessibility Test](https://accessibilitytest.org/). <br>You can check the full test result clicking [HERE](https://accessibilitytest.org/results/p8j650eYCBWt).
 ![Accessibility-test](media/images/accessibility-test.png)
 
 
