@@ -56,6 +56,28 @@ You can check the store page clicking [HERE](https://the-pink-silk.herokuapp.com
   ![ABOUT-US](media/images/about-page.png)
 
 
+* SHOPPING BAG
+  * Where the user can see the packages seleted for purchase.
+  * Is possible to adjust the quantity by typing a number in the box or using the arrows and then clicking on Update.
+  * To remove thepackage from the bag, just click on the Remove buttom.
+  * For purchase, click on Secure Checkout.
+  * To add more items, click on Back to Packages.
+
+  ![SHOPPING-BAG](media/images/shopping-bag.png)
+
+
+* TESTIMONIALS
+  * All users can read and leave comments on the testimonials.
+  * Registered users can write new testimonials.
+
+  ![TESTIMONIALS](media/images/testimonials-page.png)
+
+
+* CONTACT FORM
+  * All users can file the contact form.
+
+  ![CONTACT-FORM](media/images/contact-form.png)
+
 
 
 ## Technologies used
@@ -222,57 +244,9 @@ The site was tested and worked without any issues, using:
 ## Bugs/Issues *(from 1st repository)*
 
 
-* Gitignore
-
-When setting up all files and folders I forgot to include the .gitignore. So, when at some stage on my commitments I received and warning email from GitHub about my keys being exposed. <br>
-*To Fix: No support needed - I just created a new file, added the necessary content on it and then commit/push to Github.*
-
-
-* Login on Django Admin
-
-When setting the supper user I was having trouble to access the Django Admin page. The url was returning an error message. <br>
-*To Fix: Needed support from Tutor - The server was not running. I was told to run the server and use the url https://8000-rlorimier-bookclub-fa25pzry77q.ws-eu63.gitpod.io/admin/.*
-
-
-* Hyperlinks not working
-
-The pages were not extending the 'base.html' <br>
-*To Fix: Needed support from Tutor - I was told to include on the top of every page 'load static' and it worked*
-
-
-* New comment does not show
-
-When adding a new comment (logged in and/or out), the page is reloaded and redirected correctly with no error messages, however the comment is not saved and does not appear on the website neither on the blog admin server. <br>
-*To Fix: No support needed (although I tried to discuss this issue with my mentor but the time was not enough) - This is the issue that took longer to be solved. I searched on web for different tutorials but any of them seemed to be helpfull. After a while, I just needed to add 'data' on views.py, line 55*
-
-
-* New post show error message
-
-When adding a new post (only logged users), it shows and error message <br>
-*To Fix: No support needed - I was using the same function for both, edit and create a new post. I decided to make it individualy and then it starts to work*
-
-
-* GET /favicon.ico HTTP/1.1" 404 179
-
-The terminal keeps showing this error from time to time and I can not find a solution or even where is comming from, as I did not add any favicon on the blog. <br> *BUG NOT FIXED*
-
-
-* Push failed on Heroku
-
-When pushing my gitpod project to Heroku, following the instructions for: DEBUG=False and excluding DISABLE_COLLECTSTATIC=1, an error message is shown. I tried help from my mentor and from the tutor support but none of them were able to help me to find a solution for it. So, I left the DEBUG as False on my code and added again the DISABLE_COLLECTSTATIC=1 and tried to puch my code again. The push worked this time, however the css file is not being loaded. All funcionalities seems to work fine on the manual tests, but the css. <br> *BUG NOT FIXED*
 
 
 
-
-## Bugs/Issues *(from 2nd repository)*
-
-
-* Error 500 when registering using an email
-
-When the user is registering into the blog, if he adds his email and clicks on 'Register', the site returns the Error 500.<br>
-*To Fix: Tutor help was needed. They instructed me to add two lines on settings.py. It creates a default email so if the user adds and nonexistent email or type it wrongly, the user will be registered anyway and redirected to the home page, with no errors.*
-
-![Error500](media/images/signup-error500.png)
 
 
 
