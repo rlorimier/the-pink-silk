@@ -26,29 +26,34 @@ You can check the store page clicking [HERE](https://the-pink-silk.herokuapp.com
 ### User features
 
 
-#### NAVBAR
+* NAVBAR
+  * Home - on the navigation bar at the top right, brings the user back to the home page.
+  * Spa Packages - on the navigation bar at the top right, brings the user to a page containing a brief information about the available packages.
+  * Testimonials - on the navigation bar at the top right, brings the user to a page where a list with all testimonials can be seen.
+  * Contact - on the navigation bar at the top right, brings the user to a page containg a contact form.
+  * Member Area - on the navigation bar at the top right:
+    * All users have options to Register or Sign In
+    * Registerd users have options to Sign Out, leave a New Testimonial or visit My Profile
+    * Superusers have the same options as Registered users plus an option to Add New Package
+  * Shopping Bag - on the navigation bar at the top right, brings the user to the shopping bag page.
 
-![NAVBAR](media/images/navbar-home.png)
+  ![NAVBAR](media/images/navbar-home.png)
 
 
-* Home button, on the navigation bar at the top left, bringing the user back to the home page.
-* Spa Packages button, on the navigation bar at the top left, leading the user to a new page containing a brief information about the available packages.
+* FOOTER
+  * Get In Touch - column that provides the user the email and phone number of the Spa and also shows the openning times.
+  * Subscribe - column where the user can subscribe for the Spa newsletter and also find a link to the Privacy Policy.
+  * Find Us - column that shows the address and a map to the Spa location and also links to Social Media.
+  
+  ![FOOTER](media/images/footer-home.png)
 
-* Option to register/sign in on the blog clicking on the respective button from the navigation bar on the top left.
-![Navbar-Login](media/images/navbar-login.png)
 
-* Option to log out by clicking on the respective button from the navigation bar on the top left.
-![Navbar-Logout](media/images/navbar-logout.png)
+* DISCOVER
+  * By clicking on the Discover button at the Home page, the user is redirected to a page containg more information about the Spa, such as Cancellation Policy, Privacy and Terms and Conditions.
 
-* Once registered/logged in, user can interact with the blog, leaving a new comment or like/dislike posts on the post page.
-![Comments-field](media/images/comments-field.png)
+  ![DISCOVER](media/images/about-us.png)
 
-* Warning message is shown when user log in/out or leave a comment.
-![Warning-msg](media/images/warning-msg.png)
-
-* Read more button, on botton of every post, giving the user the possibility of reading the full review.
-![Readmore-btn](media/images/readmore-btn.png)
-
+  ![ABOUT-US](media/images/about-page.png)
 
 
 
