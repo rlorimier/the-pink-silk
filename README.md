@@ -79,6 +79,11 @@ You can check the store page clicking [HERE](https://the-pink-silk.herokuapp.com
   ![CONTACT-FORM](media/images/contact-form.png)
 
 
+* FACEBOOK PAGE
+  * All users can have access to the Facebook Page
+
+  ![FACEBOOK](media/images/facebook-page.png)
+
 
 ## Technologies used
 
