@@ -135,56 +135,58 @@ You can check the store page clicking [HERE](https://the-pink-silk.herokuapp.com
 
 ### As Visitor:
 
-* I want to be able to navigate through the website.
+* I want to see all packages available so I can decide what to buy.
 
-All pages are accessible to all visitors on the blog.
+  Option available at the navigation bar, Spa Packages.
 
+* I want to see reviews so I can decide if this is the right place for me.
 
-* I want to know how the blog was created.
+  Option available at the navigation bar, Testimonials.
 
-All users can have access to the About us page.
+* I want to contact the Spa so I can have my queries answered.
 
+  Option available at the navigation bar, Contact.
 
-* I want to read the book reviews.
+  Email and telephone number also available at the footer in every page.
 
-The pages with full reviews are accessible to all users clicking on the button ‘Read more’ at the Home page. The user can read the review, see the book cover, see the number of likes, and read the comments left from registered users.
+* I want to be able to register so I can have my own account.
 
+  Option available at the navigation bar, Member Area - Register.
 
-* I want to make comments and like the posts.
+* i want to know more about the Spa and it's cancelation policy.
 
-This option is only available for registered users.
-
-
-* I want to leave a review
-
-This option is only available for the blog admin.
+  Option available by clicking on Discover at the home page.
 
 
 ### As Registered User:
 
-* I want to be able to navigate through the website.
+* I want to write a testimonial so other users and the admin can read my opnion.
 
-All pages are accessible to all visitors on the blog.
+  Option available at the navigation bar, Member Area - Testimonials.
 
+* I want to be able to login/out with no issues so I can have access to my profile.
 
-* I want to know how the blog was created.
+  Option available at the navigation bar, Member Area - Log In / Out.
 
-All users can have access to the About us page.
+* I want to have a personal profile so I can store my information and see previous orders made.
 
-
-* I want to read the book reviews.
-
-The pages with full reviews are accessible to all users clicking on the button ‘Read more’ at the Home page. The user can read the review, see the book cover, see the number of likes, and read the comments left from registered users.
+  Option available at the navigation bar, Member Area - My profile.
 
 
-* I want to make comments and like the posts.
+### As Admin:
 
-This option is available when the user is logged in to the blog, by accessing the book review page. The button to like the book review is just after the text, followed by the comment field.
+* I want to add new packages for sale so I can increase the options available.
 
+  Option available at Member Area - Add new package.
 
-* I want to leave a review.
+* I want to be able to edit existing packages so I can keep it updated. 
+  
+  Option available at every individual package page.
 
-This option is only available for the blog admin.
+* I want to be able to delete existing packages so I can remove it if unavailable.
+
+  Option available at every individual package page.
+ 
 
 
 
@@ -241,11 +243,13 @@ The site was tested and worked without any issues, using:
 
 
 
-## Bugs/Issues *(from 1st repository)*
+## Bugs/Issues
 
+* Webhooks
 
+    All the code seems correct. It was tested with the help of the Tutors and Mentor, however we could not find a solution for this error on time for the submission. 
 
-
+![WEBHOOK-ERROR](media/images/weebhook-error.png)
 
 
 
