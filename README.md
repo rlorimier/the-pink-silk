@@ -2,7 +2,11 @@
 
 For my Project Portifolio #5 on Code Institute's Diploma in Software Developement course I have created an E-commerce store for a SPA called The Pink Silk. 
 
-On the website, all users have access to view and purchase the available spa packages. Registered users can also have access at their profile page, where is possible to edit their personal information and view previous orders. Store management with a superuser access can add new packages for sale, as well as edit and delete existing packages.
+The website was designed in to be multi-page user friendly. Designed to offer people an easy way to buy a calm day off or just a few minutes of relaxation.
+
+Being a new or a frequent visitor to the Spa, everyone can have access to the website, to view and purchase availeble packages. Website users have the option of register themselves and create a profile page, where is possible to edit their personal information and view previous orders. Once registered we encourage our visitors to leave a testimonial, to tell other users about their experience at the Spa. These testimonials can be commented for all users on the website. The shopping bag is easy to access by clicking on the bag icon on the top left of the page. There, users can find information about their current purchase. When clicking on 'Secure Checkout' the user is redirected to the checkout page, where the purchase can be securely finished.
+
+A contact form is also available and, when submitted, one of our member staff will responde any questions related with our services. There is also a phone number and email availables on the bottom of every page if the user prefer contact us this way. We also have a subscription option so the user can have access to our weekly newsletter and be the first to know about offers when available. The address and a google map can be used to facilitate the navigation when going to the spa.
 
 
 You can check the store page clicking [HERE](https://the-pink-silk.herokuapp.com/)
@@ -209,6 +213,10 @@ A favicon was added the website to enable users to easily locate the website in 
 * Deployed in Heroku for online interaction.
 * Used AWS to store media files.
 
+### Features to be implemented
+
+* Add images to the packages
+* Add spa photos
 
 ## Wireframes
 
