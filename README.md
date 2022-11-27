@@ -188,7 +188,7 @@ The board was created  using Github projects and can be located [HERE](https://g
 
 ### Social Media
 
-
+Creating a Facebook page was part of the business plan. Facebook is one of the largest social media platforms in the world. Having a page and posting regularly is a great way to engage with current and potential customers, as it allows you to target specific audiences and advertise to them in a cost-efficient way.
 
 * FACEBOOK PAGE
   * All users can have access to the Facebook Page
@@ -353,6 +353,8 @@ All .py files were individualy tested, with the exception of settings.py, as som
 
 * JavaScript - [JSHint](https://jshint.com/)
 
+All .js files were individualy tested and passed in all the testes. You can check an exemple below.
+
 ![JSHint-testing](media/images/jshint-testing.png)
 
 
@@ -375,7 +377,6 @@ The site was tested and worked without any issues, using:
 
 
 
-
 ## Bugs/Issues
 
 * Webhooks
@@ -386,35 +387,82 @@ The site was tested and worked without any issues, using:
 
 
 
+## Deployment
 
-## Creating a Repository and Deploying
+### Requirements for Deployment
 
-* To create a new repository:
+* Heroku account
+* Stripe account
+* ElephantSQL account
+* GitHub account, Gitpod
 
-Logged in my GitHub page and accessed Code Institute GitHub page. 
+### Heroku Deployment
 
-Selected python-essencials-template and clicked in Use This Template. 
+This project was deployed on Heroku following these steps:
 
-Created a new repository from the one mentioned above and choose the option 'Gitpod'. Once the repository is open on Gitpod it is just start to code. I chose the option to save automatically. 
+#### Requirements.txt and Procfile
 
-After every significant amount of coding is time for local commits: On Gitpot, go to Source Control, type in a message and click Commit. After a work day, the last local commit is done and then click in Push to commit all local commits to GitHub repository. 
+Create these files using these steps in (GitPod) terminal:
 
+1. Type `pip3 freeze -–local > requirements.txt` to create a requirements file (it keeps track of the Python / Django dependencies that we've installed for our project)
+2. Type `echo web: python3 run.py > Procfile` to create Procfile (a Heroku-specific type of file that tells Heroku how to run our project, what command to use to start the app)
+3. Delete any additional empty lines after the line `web: gunicorn pink_silk.wsgi:application`
+4. Push these two files into your depository
 
-* To Deploy:
+#### Create Heroku App
 
-The project was deployed using Heroku. The process is as follows:
+1. Log in to Heroku and 'Create New App' from the dashboard
+2. Give your app a name and select the region closest to you. When you’re done, click Create app to confirm
+3. Add config vars to Heroku - go to Heroku Settings tab, click on Reveal Config Vars, and add environment variables described below in key/value pairs
 
-Once you have signed up to Heroku, on the top right of the dashboard there is a button labelled 'New'. This will open a dropdown; please select 'Create new app'. On the next page you can choose your region and a name for the project. Then click 'Create app'.
+   * DATABASE_URL - your database variable from ElephantSQL
 
-On the next page there is a menu along the top. Navigate to 'Settings', where you will find the config vars. Scroll down to the section named 'Config vars' and click on the button labelled 'Reveal config vars'. All keys, secret keys and database url must be included in this section in order to the project work.
+   * SECRET_KEY - there are websites online that will help you generate random Django secret keys
 
-If you scroll back to the top of the page you will find the 'Deploy' tab, which has multiple options for deployment. As I am using Github for this project, I selected it and a bar came up to search for the repo I wish to connect to.
+   * EMAIL_HOST_USER - your email address used to send emails out
 
-Once you have connected, you have the option to deploy automatically (the app will update every time you push) or manually (update only when you choose). I chose automatic but you can do what suits you.
+   * EMAIL_HOST_PASS - used to authenticate to the SMTP server
 
-After the first push/update, your app will be ready to go!
+   * STRIPE_PUBLIC_KEY, STRIPE_SECRET_KEY, STRIPE_WH_SECRET - Stripe payments variables (you will need to set up a Stripe account)
 
+   * USE_AWS - to upload images to AWS (you will need to set up an AWS account)
 
+   * AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY - AWS storage variables
+
+#### Create Database
+
+1. Sign up for ElephantSQL.com to access your dashboard and click “Create New Instance”
+2. Set up your plan, give it a name and select the Tiny Turtle (Free) plan
+3. Click “Select Region”, select a data center near you and click "Review"
+4. Check your details are correct and then click “Create instance”
+5. Return to the ElephantSQL dashboard and click on the database instance name for this project
+6. In the URL section, clicking the copy icon will copy the database URL to your clipboard
+7. Open your Gitpod and, in the terminal, install dj_database_url and psycopg2, both of these are needed to connect to your external database
+8. Update your requirements.txt file with the newly installed packages
+9. In your settings.py file, import dj_database_url underneath the import for os
+10. Comment out your current database and add the new ElephantSQL database
+11. Migrate your database models to your new database and then load in the fixtures
+12. Create a superuser for your new database
+13. Delete the new database from your settings.py and uncomment your old database
+
+#### Deploying our App to Heroku
+
+1. Navigate to the Deploy tab in Heroku and connect your app to GitHub.
+2. Deploy the branch manually.
+3. Check the build log for errors.
+4. Once Heroku completed the build process, you will see a 'Your App Was Successfully Deployed' message and a link to the live site.
+5. You can also choose to enable Automatic deploys. 
+
+#### Alternative Heroku deployment via CLI
+
+0. In your CLI install Heroku by typing `npm install -g heroku`
+1. Login to Heroku by typing `heroku login -i`
+2. Get your app name from Heroku by typing command `heroku apps`
+3. Set the Heroku remote (replace the <app_name> with your actual app name): `heroku git:remote -a <app_name>`
+4. Add and commit changes to your code (commands `git add .` & `git commit -m "Deploy to Heroku via CLI"`)
+5. Push to GitHub `git push origin main`
+6. Push to Heroku `git push heroku main`
+7. Your Heroku app will be built and you will see your deployed app's URL
 
 
 ## Credits
