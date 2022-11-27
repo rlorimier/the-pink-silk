@@ -324,14 +324,6 @@ A favicon was added the website to enable users to easily locate the website in 
 
 
 
-
-
-
-
-
-
-
-
 ## Testing
 
 
@@ -366,12 +358,29 @@ All .js files were individualy tested and passed in all the testes. You can chec
 ![JSHint-testing](media/images/jshint-testing.png)
 
 
-
 ### Accessibility Testing
 
-* Tested using [Accessibility Test](https://accessibilitytest.org/). <br>You can check the full test result clicking [HERE](https://accessibilitytest.org/results/p8j650eYCBWt).
+Tested using [Accessibility Test](https://accessibilitytest.org/).
+
+You can check the full test result clicking [HERE](https://accessibilitytest.org/results/p8j650eYCBWt).
 ![Accessibility-test](media/images/accessibility-test.png)
 
+
+### Page quality measurement
+
+Tested using 
+
+* On mobile views
+
+Full results can be found [HERE](https://pagespeed.web.dev/report?url=https%3A%2F%2Fthe-pink-silk.herokuapp.com%2F&form_factor=desktop)
+
+![MOBILE](media/images/performance-mobile.png)
+
+* On desktop views
+
+Full results can be found [HERE](https://pagespeed.web.dev/report?url=https%3A%2F%2Fthe-pink-silk.herokuapp.com%2F&form_factor=mobile)
+
+![DESKTOP](media/images/performance-desktop.png)
 
 
 ### Browser Testing
