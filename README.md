@@ -12,18 +12,87 @@ You can check the store page clicking [HERE](https://the-pink-silk.herokuapp.com
 
 
 
+# User Experience UX
+
+
+## Site Goals
+
+### Site Owner's Goals
+
+* Selling spa packages to all users.
+* Providing detailed information about what is being offered on each package.
+* Offering a simple and secure checkout.
+* Letting users leave their personal opnion on treatments received at the spa.
+
+### Site User's Goals
+
+* Finding information about the services offered.
+* Benefitting from other user's testimonials to help on making decisions.
+* Learning more about the company and it's policies.
+
+
+## Agile Planning
+
+The project was developed using agile methodologies, by delivering small features divided in 4 sprints - To do Admin, To do User, In progress, Done.
+
+Every card was labeled under User Story, divided in User and Admin. There is also a label for Bug, used when some issue was found.
+
+The board was created  using Github projects and can be located [HERE](https://github.com/users/rlorimier/projects/1/views/1) to have access to more information on the project cards.
+
+![AGILE-BOARD](media/images/agile-board.png)
+
+
+## User Stories
+
+### As User:
+
+* I want to see all packages available so I can decide what to buy.
+* I want to see reviews so I can decide if this is the right place for me.
+* I want to contact the Spa so I can have my queries answered.
+* I want to be able to register so I can have my own account.
+* I want to know more about the Spa and it's cancelation policy so I can make sure is a reliable place.
+* I want to have a shopping bag so I can see what I am purchasing.
+* I want to be able to update or delete items from my shopping bag so I can finish my purchase correctly.
+
+### As Registered User:
+
+* I want to write a testimonial so other users and the admin can read my opnion.
+* I want to be able to login/out with no issues so I can have access to my profile.
+* I want to have a personal profile so I can store my information and see previous orders made.
+
+### As Admin:
+
+* I want to add new packages for sale so I can increase the options available.
+* I want to be able to edit existing packages so I can keep it updated. 
+* I want to be able to delete existing packages so I can remove it if unavailable.
+
+
+## The Scope
+
+* Responsive design - site is fully functions on all screen sizes
+* Navigation menu on all pages - Member Area changes depending on user status
+* User authentication (register, login, logout)
+* Hamburger menu for screens smaller than 994px
+* CRUD functionality for admin users on packages
+* List of packages and easy access to details page
+* User profile, containing personal information and order history
+* 404 error page
+
 
 ## Features
 
-
-### Code features
-
-* Created in Django using Gitpod.
-* Deployed in Heroku for online interaction.
-* Used AWS to store media files.
-
-
 ### User features
+
+
+#### USER STORY
+
+*As an user I want to see all packages available so I can decide what to buy*
+
+*As an user I want to be able to register so I can have my own account*
+
+*As an user I want to be able to login/out with no issues so I can have access to my profile*
+
+*As an user I want to have a personal profile so I can store my information and see previous orders made*
 
 
 * NAVBAR
@@ -40,6 +109,15 @@ You can check the store page clicking [HERE](https://the-pink-silk.herokuapp.com
   ![NAVBAR](media/images/navbar-home.png)
 
 
+#### USER STORY
+
+*As an user I want to contact the Spa so I can have my queries answered*
+
+* CONTACT FORM
+  * All users can file the contact form.
+
+  ![CONTACT-FORM](media/images/contact-form.png)
+
 * FOOTER
   * Get In Touch - column that provides the user the email and phone number of the Spa and also shows the openning times.
   * Subscribe - column where the user can subscribe for the Spa newsletter and also find a link to the Privacy Policy.
@@ -48,12 +126,24 @@ You can check the store page clicking [HERE](https://the-pink-silk.herokuapp.com
   ![FOOTER](media/images/footer-home.png)
 
 
+
+#### USER STORY
+
+*As an user I want to know more about the Spa and it's cancelation policy so I can make sure is a reliable place*
+
 * DISCOVER
   * By clicking on the Discover button at the Home page, the user is redirected to a page containg more information about the Spa, such as Cancellation Policy, Privacy and Terms and Conditions.
 
   ![DISCOVER](media/images/about-us.png)
 
   ![ABOUT-US](media/images/about-page.png)
+
+
+#### USER STORY
+
+*As an user I want to have a shopping bag so I can see what I am purchasing*
+
+*As an user I want to be able to update or delete items from my shopping bag so I can finish my purchase correctly*
 
 
 * SHOPPING BAG
@@ -66,6 +156,12 @@ You can check the store page clicking [HERE](https://the-pink-silk.herokuapp.com
   ![SHOPPING-BAG](media/images/shopping-bag.png)
 
 
+#### USER STORY
+
+*As an user I want to write a testimonial so other users and the admin can read my opnion*
+
+*As an user I want to see reviews so I can decide if this is the right place for me*
+
 * TESTIMONIALS
   * All users can read and leave comments on the testimonials.
   * Registered users can write new testimonials.
@@ -73,16 +169,113 @@ You can check the store page clicking [HERE](https://the-pink-silk.herokuapp.com
   ![TESTIMONIALS](media/images/testimonials-page.png)
 
 
-* CONTACT FORM
-  * All users can file the contact form.
+#### USER STORY
 
-  ![CONTACT-FORM](media/images/contact-form.png)
+*As an admin I want to add new packages for sale so I can increase the options available*
+
+*As an admin I want to be able to edit existing packages so I can keep it updated*
+
+*As an admin I want to be able to delete existing packages so I can remove it if unavailable*
+
+* ADD NEW PACKAGE
+  * Admin users can have access to create new packages and update/delete existing ones.
+
+  ![ADD-PACKAGE](media/images/add-package.png)
+
+  ![EDIT-PACKAGE](media/images/edit-package.png)
+
+
+
+### Social Media
+
 
 
 * FACEBOOK PAGE
   * All users can have access to the Facebook Page
 
   ![FACEBOOK](media/images/facebook-page.png)
+
+
+### Favicon
+
+A favicon was added the website to enable users to easily locate the website in the browser when multiple tabs are open.
+
+![FAVICON](media/images/favicon-icon.png)
+
+
+### Code features
+
+* Created in Django using Gitpod.
+* Deployed in Heroku for online interaction.
+* Used AWS to store media files.
+
+
+## Wireframes
+
+* Home
+
+![WF-HOME](media/images/wf-home.png)
+
+* Discover
+
+![WF-DISCOVER](media/images/wf-about.png)
+
+* Spa Packages - All
+
+![WF-PACKAGESALL](media/images/wf-packages-all.png)
+
+* Spa Packages - Detail
+
+![WF-PACKAGESDETAIL](media/images/wf-packages-detail.png)
+
+* Spa Packages - Add New
+
+![WF-PACKAGESADD](media/images/wf-packages-add.png)
+
+* Testimonial - All
+
+![WF-TESTIMONIALALL](media/images/wf-testimonial-all.png)
+
+* Testimonial - Add New
+
+![WF-TESTIMONIALNEW](media/images/wf-testimonial-new.png)
+
+* Contact Us
+
+![WF-CONTACT](media/images/wf-contact.png)
+
+* Bag - Empty
+
+![WF-BAGEMPTY](media/images/wf-bag-empty.png)
+
+* Bag - Full
+
+![WF-BAGFULL](media/images/wf-bag-full.png)
+
+* Checkout
+
+![WF-CHECKOUT](media/images/wf-checkout.png)
+
+* Checkout Successful
+
+![WF-CHECKOUTSUCCESS](media/images/wf-checkout-success.png)
+
+* My Profile
+
+![WF-PROFIILE](media/images/wf-profile.png)
+
+* Navbar - Admin
+
+![WF-NAVBARADMIN](media/images/wf-navbar-admin.png)
+
+* Navbar - Registered User
+
+![WF-NAVBARREG](media/images/wf-navbar-reguser.png)
+
+* Navbar - All Users
+
+![WF-NAVBARALL](media/images/wf-navbar-alluser.png)
+
 
 
 ## Technologies used
@@ -111,9 +304,7 @@ You can check the store page clicking [HERE](https://the-pink-silk.herokuapp.com
 * [Mailchimp](https://mailchimp.com/) for email newslatter subscription
 
 
-
-
-## Resources
+### Resources
 
 
 * [Code Institute](https://codeinstitute.net/ie/) - course materials, Slack community and tutor/mentor support
@@ -125,78 +316,10 @@ You can check the store page clicking [HERE](https://the-pink-silk.herokuapp.com
 
 
 
-## Credits
-
-
-### Code
-
-* Code based on and developed from Code Institute's walkthrough Boutique Ado.
-
-
-### Content
-
-* Background image from [Pexels](https://www.pexels.com/).
 
 
 
 
-## User Stories
-*It can also be viewed on my [GITHUB](https://github.com/users/rlorimier/projects/1/views/1) page*
-
-### As Visitor:
-
-* I want to see all packages available so I can decide what to buy.
-
-  Option available at the navigation bar, Spa Packages.
-
-* I want to see reviews so I can decide if this is the right place for me.
-
-  Option available at the navigation bar, Testimonials.
-
-* I want to contact the Spa so I can have my queries answered.
-
-  Option available at the navigation bar, Contact.
-
-  Email and telephone number also available at the footer in every page.
-
-* I want to be able to register so I can have my own account.
-
-  Option available at the navigation bar, Member Area - Register.
-
-* I want to know more about the Spa and it's cancelation policy.
-
-  Option available by clicking on Discover at the home page.
-
-
-### As Registered User:
-
-* I want to write a testimonial so other users and the admin can read my opnion.
-
-  Option available at the navigation bar, Member Area - Testimonials.
-
-* I want to be able to login/out with no issues so I can have access to my profile.
-
-  Option available at the navigation bar, Member Area - Log In / Out.
-
-* I want to have a personal profile so I can store my information and see previous orders made.
-
-  Option available at the navigation bar, Member Area - My profile.
-
-
-### As Admin:
-
-* I want to add new packages for sale so I can increase the options available.
-
-  Option available at Member Area - Add new package.
-
-* I want to be able to edit existing packages so I can keep it updated. 
-  
-  Option available at every individual package page.
-
-* I want to be able to delete existing packages so I can remove it if unavailable.
-
-  Option available at every individual package page.
- 
 
 
 
@@ -290,3 +413,18 @@ If you scroll back to the top of the page you will find the 'Deploy' tab, which 
 Once you have connected, you have the option to deploy automatically (the app will update every time you push) or manually (update only when you choose). I chose automatic but you can do what suits you.
 
 After the first push/update, your app will be ready to go!
+
+
+
+
+## Credits
+
+
+### Code
+
+* Code based on and developed from Code Institute's walkthrough Boutique Ado.
+
+
+### Content
+
+* Background image from [Pexels](https://www.pexels.com/).
