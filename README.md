@@ -332,9 +332,51 @@ A favicon was added the website to enable users to easily locate the website in 
 * Manual tests done as admin user, regular user and visitant. In all scenarios the blog funcionalities worked without showing any issues.
 * I also send the live link to friends and family members for testing and feedback.
 
-Manual testing result:
+Manual testing results
 
-![Manual-Testing](media/images/manual-testing.png)
+* NAVIGATION BAR
+
+![MT-NAVBAR](media/images/mt-navbar.png)
+
+* FOOTER
+
+![MT-FOOTER](media/images/mt-footer.png)
+
+* HOME
+
+![MT-HOME](media/images/mt-home.png)
+
+* PACKAGES
+
+![MT-PACKAGES](media/images/mt-packages.png)
+
+* REGISTER
+
+![MT-REGISTER](media/images/mt-register.png)
+
+* LOG IN
+
+![MT-SIGNIN](media/images/mt-signin.png)
+
+* FORGOT PASSWORD
+
+![MT-PASSWORD](media/images/mt-password.png)
+
+* LOG OUT
+
+![MT-LOGOUT](media/images/mt-logout.png)
+
+* PROFILE
+
+![MT-PROFILE](media/images/mt-profile.png)
+
+* SHOPPING BAG
+
+![MT-BAG](media/images/mt-bag.png)
+
+* CHECKOUT
+![MT-CHECKOUT](media/images/mt-checkout.png)
+
 
 
 ### Code Testing
@@ -493,3 +535,9 @@ Create these files using these steps in (GitPod) terminal:
 ### Content
 
 * Background image from [Pexels](https://www.pexels.com/).
+
+
+### Acknowledgement
+
+* To all tutors that support me with all types of questions.
+* Special thanks to my mentor Daisy McGirr, whom I couldn't get this far without.
